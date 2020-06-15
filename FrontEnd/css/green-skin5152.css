@@ -6,8 +6,13 @@
   background-color: #4fb084;
 }
 
-span.tag-line {
+span.tag-line-new {
   color: #ddf6e9;
+  font-size: 18px;
+  font-weight: bolder;
+  letter-spacing: 4px;
+  position: relative;
+  top: 2px;
 }
 
 .main-nav div > ul > li a {
