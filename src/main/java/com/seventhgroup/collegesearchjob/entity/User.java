@@ -4,18 +4,29 @@ package com.seventhgroup.collegesearchjob.entity;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity(name = "user")
 @NoArgsConstructor
 public class User {
   @Id
+  @GeneratedValue(strategy= GenerationType.IDENTITY)
   private String id;
   private String phone;
   private String name;
   private String school;
   private String sex;
   private String password;
+
+    public User() {
+    }
+
+    public User(String phone, String password) {
+        this.phone = phone;
+        this.password = password;
+    }
 
     public String getId() {
         return id;
