@@ -12,19 +12,15 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class User {
   @Id
-  @GeneratedValue(strategy= GenerationType.IDENTITY)
   private String id;
-  private String phone;
-  private String name;
-  private String school;
-  private String sex;
+  private String username;
+  private String email;
   private String password;
 
-    public User() {
-    }
-
-    public User(String phone, String password) {
-        this.phone = phone;
+    public User(String id, String username, String email, String password) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
         this.password = password;
     }
 
@@ -36,36 +32,12 @@ public class User {
         this.id = id;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getUsername() {
+        return username;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSchool() {
-        return school;
-    }
-
-    public void setSchool(String school) {
-        this.school = school;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -76,12 +48,21 @@ public class User {
         this.password = password;
     }
 
-    public User(String id, String phone, String name, String school, String sex, String password) {
-        this.id = id;
-        this.phone = phone;
-        this.name = name;
-        this.school = school;
-        this.sex = sex;
-        this.password = password;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

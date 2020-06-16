@@ -20,15 +20,16 @@ public class UserController {
 
     /*毕业生用户*/
     @ResponseBody
-    @GetMapping(value = "/user/register/{phone}/{school}")
-    public Map<String, Object> register(@PathVariable(value = "phone") String phone,
+    @GetMapping(value = "/user/register/{username}/{email}/{password}")
+    public Map<String, Object> register(@PathVariable(value = "email") String email,
+                                        @PathVariable(value = "username") String username,
                                         @PathVariable(value = "password") String password) {
         Map<String, Object> map = new HashMap<>();
 
         try {
-            String user_phone = userService.register(phone, password);
+            String userId = userService.register(username, email, password);
 
-            setMapFromUserId(map, user_phone);
+            setMapFromUserId(map, userId);
             map.put("msg", "注册成功");
 
         } catch (Exception e) {
@@ -39,14 +40,14 @@ public class UserController {
 
     }
 
-    private void setMapFromUserId(Map<String, Object> map, String user_phone) {
-        if (user_phone == null) {
+    private void setMapFromUserId(Map<String, Object> map, String userId) {
+        if (userId == null) {
             map.put("code", 1);
-            map.put("user_phone", null);
+            map.put("userId", null);
         }
         else {
             map.put("code", 0);
-            map.put("user_phone", user_phone);
+            map.put("userId", userId);
         }
 
 
