@@ -28,13 +28,21 @@ span.tag-line-new {
 
 .search-area-wrapper {
   background-image: url("blue-skin/blue-bg.jpg");
-  background-color: #4c4a77;
+  background-color: #4A7AAF;
 }
 .search-area-wrapper form.search-form input.search-btn {
   background-color: #6392C6;
 }
 .search-area-wrapper form.search-form input.search-btn:hover {
   background-color: #588ac2;
+}
+
+.page-container {
+  background-color: rgba(74,122,175,0.5);
+}
+
+.page-container > .container {
+  background-color: rgba(255,255,255,0.7);
 }
 
 /* Footer ------------------------------------------------------------------------------------------------------------*/

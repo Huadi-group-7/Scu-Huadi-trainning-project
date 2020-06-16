@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Header ---------------------------------------------------------------------------------------------------------*/
 .header-wrapper {
-  background-color: #4fb084;
+  background-color: #75d34A;
 }
 
 span.tag-line-new {
@@ -20,21 +20,29 @@ span.tag-line-new {
 }
 
 .main-nav .sub-menu li {
-  background-color: #34996c;
+  background-color: #34896c;
 }
 .main-nav .sub-menu li:hover {
-  background-color: #277351;
+  background-color: #276351;
 }
 
 .search-area-wrapper {
   background-image: url("green-skin/green-bg.jpg");
-  background-color: #229d8e;
+  background-color: #a0bf7c;
 }
 .search-area-wrapper form.search-form input.search-btn {
-  background-color: #4fb081;
+  background-color: #4fa081;
 }
 .search-area-wrapper form.search-form input.search-btn:hover {
-  background-color: #4aa579;
+  background-color: #4aa079;
+}
+
+.page-container {
+  background-color: rgba(160,191,124,0.5);
+}
+
+.page-container > .container {
+  background-color: rgba(255,255,255,0.6);
 }
 
 /* Footer ------------------------------------------------------------------------------------------------------------*/
@@ -43,11 +51,11 @@ span.tag-line-new {
 }
 
 #footer-bottom-wrapper {
-  background-color: #2c493c;
+  background-color: #70b434;
 }
 
 #footer .widget {
-  color: #7baa94;
+  color: #7bba94;
 }
 
 #footer .widget a {
@@ -55,15 +63,15 @@ span.tag-line-new {
 }
 
 #footer .widget ul li {
-  border-color: #3c614f;
+  border-color: #3ca14f;
 }
 
 #footer .widget #twitter_update_list > ul > li span {
-  color: #537465;
+  color: #538465;
 }
 
 #footer-bottom .copyright {
-  color: #6c9683;
+  color: #aca6a3;
 }
 
 .flickr-photos img {

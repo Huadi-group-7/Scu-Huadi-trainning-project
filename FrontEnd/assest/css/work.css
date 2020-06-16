@@ -1,0 +1,65 @@
+.search-area-wrapper {
+    min-height: 300px;
+    padding: auto;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .search-area-wrapper {
+        background-size: auto;
+        min-height: 200px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------------- */
+/* Responsive: Header for devices below desktop --------------------------------------------------------------------- */
+/*------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 979px) {
+
+}
+/*------------------------------------------------------------------------------------------------------------------- */
+/* Responsive: Landscape phone to desktop/tablet -------------------------------------------------------------------- */
+/*------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+
+    /* Search Area */
+    .search-area-wrapper {
+        background-size: auto;
+        min-height: 200px;
+        height: auto !important;
+        height: 200px;
+    }
+    .search-area-wrapper .search-area {
+        padding: 20px 0;
+    }
+    .search-area-wrapper h3.search-header {
+        font-size: 30px;
+        padding: 0 15px;
+    }
+    .search-area-wrapper p.search-tag-line {
+        padding: 0 15px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .search-area-wrapper form.search-form input.search-term {
+        width: 60%;
+    }
+
+}
+/*------------------------------------------------------------------------------------------------------------------- */
+/* Responsive: Portrait Phones -------------------------------------------------------------------------------------- */
+/*------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    /* Search Area */
+    .search-area-wrapper form.search-form input.search-term {
+        width: 80%;
+        display: block;
+        margin: 0 auto 10px;
+    }
+    .search-area-wrapper form.search-form input.search-btn {
+        display: block;
+        margin: 0 auto;
+    }
+}
+/* Menu Fix for resizing to Bigger Screen sizes */
+@media (min-width: 980px) {
+
+}

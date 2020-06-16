@@ -37,6 +37,14 @@ span.tag-line-new {
   background-color: #8e3630;
 }
 
+.page-container {
+  background-color: rgba(134,72,79,0.5);
+}
+
+.page-container > .container {
+  background-color: rgba(255,255,255,0.6);
+}
+
 /* Footer ------------------------------------------------------------------------------------------------------------*/
 #footer-wrapper {
   background-image: url("red-skin/footer-bg.png");
