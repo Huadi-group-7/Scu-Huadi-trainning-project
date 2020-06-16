@@ -13,6 +13,7 @@ import java.util.List;
 public class UserService {
     @Autowired
     private UserDao userDao;
+    /*注册*/
     public String register(String username, String email, String password) throws RuntimeException {
 
         String userId = Util.getUniqueId();
@@ -24,6 +25,18 @@ public class UserService {
         userDao.save(new User(userId, username, email, password));
         return userId;
     }
+    /*登录*/
+    public String login(String email, String password) {
+        List<User> check = userDao.findByEmailAndPassword(email, password);
+        /*没有该账号*/
+        if (check.size() == 0) {
+            return "";
+        }
+
+        return check.get(0).getId();
+    }
+
+
 
 
 

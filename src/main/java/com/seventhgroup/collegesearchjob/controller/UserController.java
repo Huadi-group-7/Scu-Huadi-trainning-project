@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.seventhgroup.collegesearchjob.util.Util.setMapFromUserId;
 
 @RestController
 @Api(description = "用户接口")
@@ -18,7 +21,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    /*毕业生用户*/
+    /*毕业生用户注册*/
     @ResponseBody
     @GetMapping(value = "/user/register/{username}/{email}/{password}")
     public Map<String, Object> register(@PathVariable(value = "email") String email,
@@ -40,18 +43,27 @@ public class UserController {
 
     }
 
-    private void setMapFromUserId(Map<String, Object> map, String userId) {
-        if (userId == null) {
-            map.put("code", 1);
-            map.put("userId", null);
-        }
-        else {
-            map.put("code", 0);
-            map.put("userId", userId);
-        }
 
+
+
+
+/*登录*/
+    @ResponseBody
+    @GetMapping(value = "/user/login/{email}/{password}")
+    public Map<String, Object> login(@PathVariable(value = "email") String email,
+                                        @PathVariable(value = "password") String password){
+        Map<String, Object> map = new HashMap<>();
+
+
+        String userId =  userService.login(email, password);
+
+        setMapFromUserId(map, userId);
+        map.put("msg", "登陆成功");
+        return map;
 
     }
+
+
 
 
 

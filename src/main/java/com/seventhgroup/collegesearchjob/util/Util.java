@@ -3,6 +3,7 @@ package com.seventhgroup.collegesearchjob.util;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.util.Date;
+import java.util.Map;
 import java.util.Random;
 
 public class Util {
@@ -38,6 +39,19 @@ public class Util {
             return String.valueOf(new Date().getTime());
 
         }
+
+    }
+
+    public static void setMapFromUserId(Map<String, Object> map, String userId) {
+        if (userId == null) {
+            map.put("code", 1);
+            map.put("userId", null);
+        }
+        else {
+            map.put("code", 0);
+            map.put("userId", userId);
+        }
+
 
     }
 
