@@ -22,4 +22,6 @@ public interface UserDao extends JpaRepository<User,String>{
     @Query(value = "select * from recruitment where recruitment_need like %?1%",nativeQuery = true)
     List<RecruitmentEntity> findByJob(String job);
 
+
+
 }

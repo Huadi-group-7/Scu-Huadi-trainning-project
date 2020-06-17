@@ -3,6 +3,7 @@ package com.seventhgroup.collegesearchjob.controller;
 
 import com.seventhgroup.collegesearchjob.entity.ApplymentEntity;
 import com.seventhgroup.collegesearchjob.entity.RecruitmentEntity;
+import com.seventhgroup.collegesearchjob.entity.User;
 import com.seventhgroup.collegesearchjob.service.UserService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -103,6 +104,7 @@ public class UserController {
         return map;
 
     }
+
 
 
 

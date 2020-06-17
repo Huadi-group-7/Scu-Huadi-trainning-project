@@ -1,6 +1,8 @@
 package com.seventhgroup.collegesearchjob.controller;
 
 
+import com.seventhgroup.collegesearchjob.entity.PersonalInfo;
+import com.seventhgroup.collegesearchjob.entity.User;
 import com.seventhgroup.collegesearchjob.service.PersonalInfoService;
 import com.seventhgroup.collegesearchjob.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static com.seventhgroup.collegesearchjob.util.Util.setMapFromUserId;
@@ -41,6 +44,19 @@ public class PersonalInfoController {
         map.put("msg", "个人信息填加成功");
         return map;
     }
+
+
+    /*首页搜索求职意向*/
+    @ResponseBody
+    @GetMapping(value = "/PersonalInfo/searchExpect/{keyword}")
+    public Map<String, Object> searchExpect(@PathVariable(value = "keyword") String keyword){
+        Map<String, Object> map = new HashMap<>();
+        List<PersonalInfo> personalInfos = personalInfoService.searchExpect(keyword);
+        map.put("msg", "搜索成功");
+        map.put("data",personalInfos);
+        return map;
+    }
+
 
 
 }
