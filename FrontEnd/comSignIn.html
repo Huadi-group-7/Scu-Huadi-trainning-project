@@ -5,12 +5,7 @@
 
 	<!-- CSS -->
 
-	<link rel="stylesheet" href="assest/css/comSign.css">
-	<link rel='stylesheet' id='bootstrap-css-css'  href='css/bootstrap5152.css?ver=1.0' type='text/css' media='all' />
-	<link rel='stylesheet' id='responsive-css-css'  href='css/responsive5152.css?ver=1.0' type='text/css' media='all' />
-	<link rel='stylesheet' id='main-css-css'  href='css/main5152.css?ver=1.0' type='text/css' media='all' />
-	<link rel='stylesheet' id='main-css-color'  href='css/green-skin5152.css?ver=1.0' type='text/css' media='all' />
-
+	<link rel="stylesheet" href="assest/css/Sign.css">
 
 
 	<meta name="description" content="">
@@ -26,50 +21,6 @@
 </style>
 
 <body>
-
-	<!-- Start of Header -->
-	<div class="header-wrapper">
-		<header>
-			<div class="container">
-
-
-				<div class="logo-container">
-					<!-- Website Logo -->
-					<a href="index-2.html"  title="智慧就业大数据分析平台">
-						<!--<img src="images/logo.png" alt="Knowledge Base Theme">-->
-					</a>
-					<span class="tag-line-new">智慧就业大数据分析平台</span>
-				</div>
-
-
-				<!-- Start of Main Navigation -->
-				<nav class="main-nav">
-					<div class="menu-top-menu-container">
-						<ul id="menu-top-menu" class="clearfix">
-							<li class="current-menu-item"><a href="index-2.html">主页</a></li>
-							<li><a href="search.html">搜索</a></li>
-							<li id="title-signin" style="display: none"><a href="comSignIn.html">登录</a></li>
-							<li id="title-signon" style="display: none"><a href="signon.html">注册</a></li>
-							<li id="title-mine" style="display: none"><a href="#" >我的</a>
-								<ul class="sub-menu">
-									<li><a href="">我的首页</a></li>
-									<li><a href="">我的简历</a></li>
-									<li><a href="">我的消息</a></li>
-									<li><a href="" onclick="">修改密码</a></li>
-									<li><a href="" onclick="">注销登录</a></li>
-								</ul>
-							</li>
-							<li><a href="contact.html">联系我们</a></li>
-						</ul>
-					</div>
-				</nav>
-				<!-- End of Main Navigation -->
-
-			</div>
-		</header>
-	</div>
-	<!-- End of Header -->
-
 	<div class="sign">
 		<div class="bg">
 			<div class="container">
@@ -78,23 +29,23 @@
 						<div class="sign__content">
 						<!-- authorization form -->
 							<form action="#" class="sign__form">
-								<h3 class="header_nav">智慧就业大数据大数据平台</h3>
+								<h3 class="header_nav">智慧就业大数据大数据平台-公司登录</h3>
 
 								<div class="sign__group">
-									<input type="text" class="sign__input" placeholder="公司名称/账户名">
+									<label><font style="font-size:13px;">公司名称
+									<input type="text" id="comName" class="sign__input" placeholder="公司名称/账户名"></font></label>
 								</div>
 
 								<div class="sign__group">
-									<input type="password" class="sign__input" placeholder="密码">
+									<label><font style="font-size:13px;">输入密码
+										<input type="password" id="comPassword" class="sign__input" placeholder="密码"></font></label>
 								</div>
 
+							<button class="sign__btn" type="button" onclick=""><span><font style="vertical-align: inherit;">登入</font></span></button>
 
-							
-							<button class="sign__btn" type="button"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">登入</font></font></span></button>
+							<span class="sign__text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">还没有帐号？</font></font><a href="comSignUp.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册！</font></font></a></span>
 
-							<span class="sign__text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">还没有帐号？</font></font><a href="signup.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册！</font></font></a></span>
-
-							<span class="sign__text"><a href="forgot.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">忘记密码？</font></font></a></span>
+							<span class="sign__text"><a href="modifyPassword.html" style="margin:30px;"><font style="vertical-align: inherit;">修改密码？</font></a><a href="stuSignIn.html"><font style="vertical-align: inherit;">学生账户？</font></a></span>
 						</form>
 						<!-- end authorization form -->
 						</div>
@@ -103,71 +54,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- Start of Footer -->
-	<footer id="footer-wrapper">
-		<div id="footer" class="container">
-			<div class="row">
-
-				<div class="span4">
-					<section class="widget">
-						<h3 class="title">我们的宗旨</h3>
-						<div class="textwidget">
-							<p>让每一个高校求职者都能找到心仪的企业 </p>
-							<p>让每一个企业都能找到心仪的高校求职者</p>
-						</div>
-					</section>
-				</div>
-
-				<div class="span4">
-					<section class="widget"><h3 class="title">快速导航</h3>
-						<ul>
-							<li><a href="index.html">首页</a> </li>
-							<li><a href="#">查询</a> </li>
-						</ul>
-					</section>
-				</div>
-
-				<div class="span4">
-					<section class="widget">
-						<h3 class="title">热门推荐</h3>
-						<div id="twitter_update_list">
-							<ul>
-								<li>没有推荐</li>
-							</ul>
-						</div>
-
-					</section>
-				</div>
-
-			</div>
-		</div>
-		<!-- end of #footer -->
-
-		<!-- Footer Bottom -->
-		<div id="footer-bottom-wrapper">
-			<div id="footer-bottom" class="container">
-				<div class="row">
-					<div class="span6">
-						<p class="copyright">
-							Copyright © 2013. All Rights Reserved by KnowledgeBase.Collect from <a href="https://github.com/Huadi-group-7" title="华迪7小组" target="_blank">华迪7小组</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End of Footer Bottom -->
-
-	</footer>
-	<!-- End of Footer -->
 
 	<!-- JS -->
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/wNumb.js"></script>
-	<script src="js/nouislider.min.js"></script>
-	<script src="js/select2.min.js"></script>
-	<script src="js/jquery.mousewheel.min.js"></script>
-	<script src="js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="assest/js/comSignIn.js"></script>
+
 </body>
 </html>

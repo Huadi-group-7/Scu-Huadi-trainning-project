@@ -1,0 +1,32 @@
+
+div.costs-uploadfile-div{
+    position:relative;
+    padding-
+}
+div.costs-uploadfile-div #textfield{
+    width:150px;
+    height:22px;
+}
+div.costs-uploadfile-div #logo{
+    width:relative;
+    height:relative;
+    position: absolute;
+    top: 0;
+    left:0;
+    filter: alpha(opacity:0);
+    opacity: 0;
+}
+div.costs-uploadfile-div .allBtn{
+    padding:0;
+    margin:0;
+    height: 22px;
+    line-height: 22px;
+    width: 80px;
+    background-color: #3b4348;
+    border: none;
+    color: #fff;
+    }
+.checkbox-appearance{
+    -webkit-appearance: checkbox;
+
+}
