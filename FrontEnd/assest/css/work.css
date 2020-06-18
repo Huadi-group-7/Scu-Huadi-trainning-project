@@ -3,6 +3,10 @@
     padding: auto;
 }
 
+.support-widget {
+    background-color: rgba(160,191,124,0.8);
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
     .search-area-wrapper {
         background-size: auto;
