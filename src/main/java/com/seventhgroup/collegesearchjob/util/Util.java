@@ -43,7 +43,7 @@ public class Util {
     }
 
     public static void setMapFromUserId(Map<String, Object> map, String userId) {
-        if (userId == null) {
+        if (userId == "") {
             map.put("code", 1);
             map.put("userId", null);
         }

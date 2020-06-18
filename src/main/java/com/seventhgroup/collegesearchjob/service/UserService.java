@@ -28,7 +28,7 @@ public class UserService {
         return userId;
     }
     /*登录*/
-    public String login(String email, String password) {
+    public String login(String email, String password) throws RuntimeException{
         List<User> check = userDao.findByEmailAndPassword(email, password);
         /*没有该账号*/
         if (check.size() == 0) {
@@ -39,7 +39,7 @@ public class UserService {
     }
 
     /*修改密码*/
-    public String modifyPassword(String email, String password){
+    public String modifyPassword(String email, String password)throws RuntimeException{
         List<User> check = userDao.findByEmail(email);
         if (check.size() == 0) {
             throw new RuntimeException("该邮箱未注册,请重新输入");
@@ -53,7 +53,7 @@ public class UserService {
 
 
     /*修改用户名*/
-    public String modifyUsername(String id, String username){
+    public String modifyUsername(String id, String username)throws RuntimeException{
         List<User> check = userDao.findByID(id);
         String email = check.get(0).getEmail();
         String password = check.get(0).getPassword();
@@ -63,7 +63,7 @@ public class UserService {
     }
 
     /*获得个人信息*/
-    public Object getPersonalInfo(String id){
+    public Object getPersonalInfo(String id)throws RuntimeException{
         Object check = userDao.findById_join(id);
         return check;
 

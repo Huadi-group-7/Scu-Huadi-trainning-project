@@ -11,21 +11,21 @@ import javax.persistence.Id;
 public class AdministratorEntity {
 
     @Id
-    private int admin_id;
+    private String admin_id;
     private String admin_password;
     private String name;
 
-    public AdministratorEntity(int admin_id, String admin_password, String name) {
+    public AdministratorEntity(String admin_id, String admin_password, String name) {
         this.admin_id = admin_id;
         this.admin_password = admin_password;
         this.name = name;
     }
 
-    public int getAdmin_id() {
+    public String getAdmin_id() {
         return admin_id;
     }
 
-    public void setAdmin_id(int admin_id) {
+    public void setAdmin_id(String admin_id) {
         this.admin_id = admin_id;
     }
 
