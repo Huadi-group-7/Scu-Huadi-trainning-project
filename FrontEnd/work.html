@@ -48,13 +48,23 @@
                         <ul id="menu-top-menu" class="clearfix">
                             <li class="current-menu-item"><a href="index-2.html">主页</a></li>
                             <li><a href="search.html">搜索</a></li>
-                            <li id="title-signin" style="display: none"><a href="comSignIn.html">登录</a></li>
-                            <li id="title-signon" style="display: none"><a href="signon.html">注册</a></li>
+                            <li id="title-signin" ><a href="#">登录</a>
+                                <ul class="sub-menu" style="display: none">
+                                    <li><a href="stuSignIn.html">学生登录</a></li>
+                                    <li><a href="comSignIn.html">企业登录</a></li>
+                                </ul>
+                            </li>
+                            <li id="title-signon" style="display: none"><a href="#">注册</a>
+                                <ul class="sub-menu">
+                                    <li><a href="stuSignUp.html">学生注册</a></li>
+                                    <li><a href="comSignUp.html">企业注册</a></li>
+                                </ul>
+                            </li>
                             <li id="title-mine" style="display: none"><a href="#" >我的</a>
                                 <ul class="sub-menu">
-                                    <li><a href="">我的首页</a></li>
-                                    <li><a href="">我的简历</a></li>
-                                    <li><a href="">我的消息</a></li>
+                                    <li><a href="person-page.html?pc=1">我的首页</a></li>
+                                    <li><a href="person-page.html?pc=2">我的简历</a></li>
+                                    <li><a href="person-page.html?pc=3">我的消息</a></li>
                                     <li><a href="" onclick="">修改密码</a></li>
                                     <li><a href="" onclick="">注销登录</a></li>
                                 </ul>
@@ -366,7 +376,7 @@
                     <section class="widget"><h3 class="title">快速导航</h3>
                         <ul>
                             <li><a href="index.html">首页</a> </li>
-                            <li><a href="#">查询</a> </li>
+                            <li><a href="search.html">查询</a> </li>
                         </ul>
                     </section>
                 </div>

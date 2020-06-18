@@ -1,15 +1,14 @@
 
 div.costs-uploadfile-div{
     position:relative;
-    padding-
 }
 div.costs-uploadfile-div #textfield{
     width:150px;
     height:22px;
 }
 div.costs-uploadfile-div #logo{
-    width:relative;
-    height:relative;
+    width: relative;
+    height: relative;
     position: absolute;
     top: 0;
     left:0;
