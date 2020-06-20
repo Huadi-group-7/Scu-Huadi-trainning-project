@@ -12,17 +12,17 @@
         document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
       } else {//FF
         path = URL.createObjectURL(imgFile.files[0]);
-        document.getElementById("textfield").value = path;
         document.getElementById("imgPreview").innerHTML = "<img src='"+path+"'/>";
       }
     }
   }
   function checkPassword(){
   var notice = "两次密码输入不一致";
-  if(document.getElementById("comPassword").value != document.getElementById("comPasswordAgain").value){
+  if(document.getElementById("stuPassword").value != document.getElementById("stuPasswordAgain").value){
     document.getElementById("checkPassword").innerHTML = notice;
   }
   else{
     document.getElementById("checkPassword").innerHTML = "";
   }
   }
+

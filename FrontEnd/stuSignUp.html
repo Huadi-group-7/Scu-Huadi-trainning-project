@@ -4,15 +4,14 @@
 
 	<!-- CSS -->
 
-	<link rel="stylesheet" href="assest/css/Sign.css">
+
 	<link rel='stylesheet' id='bootstrap-css-css'  href='css/bootstrap5152.css?ver=1.0' type='text/css' media='all' />
 	<link rel='stylesheet' id='responsive-css-css'  href='css/responsive5152.css?ver=1.0' type='text/css' media='all' />
 	<link rel='stylesheet' id='pretty-photo-css-css'  href='js/prettyphoto/prettyPhotoaeb9.css?ver=3.1.4' type='text/css' media='all' />
 	<link rel='stylesheet' id='main-css-css'  href='css/main5152.css?ver=1.0' type='text/css' media='all' />
 
-
-	<!-- JS -->
-	<script src="assest/js/comSignUp.js"></script>
+	<link rel="stylesheet" href="assest/css/Sign.css">
+	<link rel="stylesheet" href="assest/css/inputFile-css.css">
 
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -112,14 +111,18 @@
 
 							<div class="sign__group">
 								<label><font style="font-size:13px;">确认密码
-								<input type="password" id="stuPasswordAgain" class="sign__input" placeholder="确认密码"></font></label>
+								<input type="password" id="stuPasswordAgain" class="sign__input" onchange="checkPassword()" placeholder="确认密码"></font></label>
 							</div>
+							<font style="color:red;"><p id="checkPassword"></p></font>
 							<div class="sign__group">
 								<div>
 									<label><font style="font-size:13px;">证件照片
-										<a href=""  style="width:60%;" >
-											<input type="file" style="height:40px;width:80%;"  class="sign__input" id="stuPhoto" accept="image/*" placeholder="证件照">
-										</a>
+										<span style="width:60%;" >
+											<input type="file" style="height:40px;width:80%;"  onchange="PreviewImage(this)" class="sign__input" id="stuPhoto" accept="image/*" placeholder="证件照">
+										</span>
+										<div id="imgPreview" style='width:50px;height:50px;'>
+											<img src=""/>
+										</div>
 									</font></label>
 								</div>
 							</div>
@@ -256,5 +259,6 @@
 	<script type='text/javascript' src='js/jquery.validate.min.js'></script>
 	<script type='text/javascript' src='js/custom.js'></script>
 
+	<script type='text/javascript' src='assest/js/stuSignUp.js'></script>
 </body>
 </html>
