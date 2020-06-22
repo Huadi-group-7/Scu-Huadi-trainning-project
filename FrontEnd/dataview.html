@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>分析统计</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+  </head>
+<style>
+#chartLine01 div:nth-child(1){
+	width: 100% !important;
+	height: 100% !important;
+}
+#chartLine01 div:nth-child(1) canvas{
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart01 div:nth-child(1){
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart01 div:nth-child(1) canvas{
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart02 div:nth-child(1){
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart02 div:nth-child(1) canvas{
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart03 div:nth-child(1){
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart03 div:nth-child(1) canvas{
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart04 div:nth-child(1){
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart04 div:nth-child(1) canvas{
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart05 div:nth-child(1){
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart05 div:nth-child(1) canvas{
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart06 div:nth-child(1){
+	width: 100% !important;
+	height: 100% !important;
+}
+#chart06 div:nth-child(1) canvas{
+	width: 100% !important;
+	height: 100% !important;
+}
+    	</style>
+
+  <body>
+    <div id="content"> <!-- Content start -->
+        
+        <div class="inner_content">
+            <div class="statistic clearfix">
+                <div class="current_page float_left">
+                    <p>数据统计</p>
+                </div>
+
+                <div class="charts clearfix">
+                    <div class="statistic_chart pull-right">
+                    	<div id="sparkline2" class="pull-left sparkline"></div> 
+                        <div class="bars_label pull-left" style="text-align: center;">
+                            <p class="value" style="font-size: 15px;">从业人员</p>
+                            <p class="value" style="color: #ffc000;font-weight: 600;font-size: 15px;">1199523</p>
+                        </div>
+                    	
+                        <div id="sparkline" class="pull-left sparkline"></div> 
+                        <div class="bars_label first_label pull-left"  style="text-align: center;">
+                            <p class="value" style="font-size: 15px;">待业人数</p>
+                            <p class="value" style="color: #ffc000;font-weight: 600;font-size: 15px;">558330</p>
+                        </div>
+
+                        <div id="sparkline3" class="pull-left sparkline"></div> 
+                        <div class="bars_label pull-left"  style="text-align: center;">
+                            <p class="value" style="font-size: 15px;">招聘企业</p>
+                            <p class="value" style="color: #ffc000;font-weight: 600;font-size: 15px;">403430</p>
+                        </div>
+                        
+                        <div id="sparkline4" class="pull-left sparkline"></div> 
+                        <div class="bars_label first_label pull-left"  style="text-align: center;">
+                            <p class="value" style="font-size: 15px;">空缺岗位</p>
+                            <p class="value" style="color: #ffc000;font-weight: 600;font-size: 15px;">47</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widgets_area">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="well turq">
+                            <div class="well-header">
+                                <h5>不同城市不同薪资比较</h5>
+                            </div>
+
+                            <div class="well-content">
+                                <div id="chartLine01" style="height:400px; width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div class="well blue">
+                            <div class="well-header">
+                                <h5>全年求职人数变化情况</h5>
+                            </div>
+
+                            <div class="well-content">
+                                <div id="chart01" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span4">
+                        <div class="well red">
+                            <div class="well-header">
+                                <h5>成都市不同季度岗位数量变化</h5>
+                            </div>
+
+                            <div class="well-content">
+                                <div id="chart02" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div class="well blue">
+                            <div class="well-header1">
+                                <h5>成都市各行业岗位占比</h5>
+                            </div>
+
+                            <div class="well-content" style="border: 1px solid #414141;">
+                                <div id="chart03" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span4">
+                        <div class="well red">
+                            <div class="well-header1">
+                                <h5>成都市企业占比情况</h5>
+                            </div>
+
+                            <div class="well-content" style="border: 1px solid #ffc000;">
+                                <div id="chart04" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div class="well turq">
+                            <div class="well-header">
+                                <h5>北京市不同季度岗位数量变化</h5>
+                            </div>
+
+                            <div class="well-content">
+                                <div id="chart05" style="height: 300px; width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span4">
+                        <div class="well brown">
+                            <div class="well-header">
+                                <h5>成都市不同地区薪资状况）</h5>
+                            </div>
+
+                            <div class="well-content">
+                                <div id="chart06" style="height: 300px; width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/library/jquery.collapsible.min.js"></script>
+    <script src="js/library/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/library/jquery.sparkline.min.js"></script>
+    
+    
+
+		<script src="js/flatpoint_core.js"></script>
+		<script type="text/javascript" src="js/echarts.min.js" ></script>
+		<script type="text/javascript" src="js/underscore.js" ></script>
+		<script type="text/javascript" src="js/dataview.js" ></script>
+    
+    
+    
+
+    
+
+  </body>
+</html>
