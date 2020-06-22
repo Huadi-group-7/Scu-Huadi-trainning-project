@@ -385,12 +385,11 @@ a:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
-  margin-left: 2.12766%;
-  *margin-left: 2.07447%;
-}
-.row-fluid [class*="span"]:first-child {
   margin-left: 0;
+  /*margin-left: 2.12766%;*/
+  /**margin-left: 2.07447%;*/
 }
+
 .row-fluid .controls-row [class*="span"] + [class*="span"] {
   margin-left: 2.12766%;
 }
