@@ -1,3 +1,4 @@
+ //使用input上传图片并且将图片用img展示
  function PreviewImage(imgFile) {
     var pattern = /(\.*.jpg$)|(\.*.png$)|(\.*.jpeg$)|(\.*.bmp$)|(\.*.svg$)/;
     if (!pattern.test(imgFile.value)) {
@@ -17,6 +18,8 @@
       }
     }
   }
+
+  //判断两次密码是否一致
   function checkPassword(){
   var notice = "两次密码输入不一致";
   if(document.getElementById("comPassword").value != document.getElementById("comPasswordAgain").value){
@@ -26,3 +29,25 @@
     document.getElementById("checkPassword").innerHTML = "";
   }
   }
+
+  //判断comSignUpForm中是否有必要信息没有填入
+  /*function validateForm(){
+    var name = document.getElementById("comName").value;
+    var password = document.getElementById("comPassword").value;
+    var passwordAgain = document.getElementById("comPasswordAgain").value;
+    var nature = document.getElementById("comNature").value;
+    var logo = document.getElementById("logo").value;
+    var setUpDate = document.getElementById("comSetUpDate").value;
+    var email = document.getElementById("comEmail").value;
+    var web = document.getElementById("comWeb").value;
+    var legalPerson = document.getElementById("comLegalPerson").value;
+    print("正在运行validateForm");
+    if(name==""||name==null||password==""||password==null||passwordAgain==""||passwordAgain==null||nature==""||nature==null||logo==""||logo==null||setUpDate==""||setUpDate==null||email==""||email==null||web==""||web==null||legalPerson==""||legalPerson==null){
+        alert("请完善注册信息");
+        return false;
+    }
+    else{
+        return true;
+    }
+  }
+  */

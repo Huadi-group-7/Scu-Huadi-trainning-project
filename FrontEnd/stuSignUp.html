@@ -92,33 +92,33 @@
 
 							<div class="sign__group">
 								<label><font style="font-size:13px;">手机号码
-								<input type="text" id="stuPhone" class="sign__input" placeholder="手机号码"></font></label>
+								<input type="text" id="stuPhone" class="sign__input" placeholder="手机号码" required="required"></font></label>
 							</div>
 							<div class="sign__group">
 								<label><font style="font-size:13px;">电子邮箱
-								<input type="text" id="stuEmail" class="sign__input" placeholder="电子邮箱"></font></label>
+								<input type="text" id="stuEmail" class="sign__input" placeholder="电子邮箱" required="required"></font></label>
 							</div>
 							<div class="sign__group">
 								<div><label><font style="font-size:13px;">邮箱验证
-									<input type="text" id="verificationCode" class="sign__input" style="width:40%" placeholder="验证码"><button class="sign__btn" type="button" style="width:30%;margin:12"><span><font style="vertical-align: inherit;">发送验证码</font></span></button></font></label></div>
+									<input type="text" id="verificationCode" class="sign__input" style="width:40%" placeholder="验证码" required="required"><button class="sign__btn" type="button" style="width:30%;margin:12"><span><font style="vertical-align: inherit;">发送验证码</font></span></button></font></label></div>
 							</div>
 
 
 							<div class="sign__group">
 								<label><font style="font-size:13px;">输入密码
-									<input type="password" id="stuPassword" class="sign__input" placeholder="密码"></font></label>
+									<input type="password" id="stuPassword" class="sign__input" placeholder="密码" required="required"></font></label>
 							</div>
 
 							<div class="sign__group">
 								<label><font style="font-size:13px;">确认密码
-								<input type="password" id="stuPasswordAgain" class="sign__input" onchange="checkPassword()" placeholder="确认密码"></font></label>
+								<input type="password" id="stuPasswordAgain" class="sign__input" onchange="checkPassword()" placeholder="确认密码" required="required"></font></label>
 							</div>
 							<font style="color:red;"><p id="checkPassword"></p></font>
 							<div class="sign__group">
 								<div>
 									<label><font style="font-size:13px;">证件照片
 										<span style="width:60%;" >
-											<input type="file" style="height:40px;width:80%;"  onchange="PreviewImage(this)" class="sign__input" id="stuPhoto" accept="image/*" placeholder="证件照">
+											<input type="file" style="height:40px;width:80%;"  onchange="PreviewImage(this)" class="sign__input" id="stuPhoto" accept="image/*" placeholder="证件照" required="required">
 										</span>
 										<div id="imgPreview" style='width:50px;height:50px;'>
 											<img src=""/>
@@ -128,7 +128,7 @@
 							</div>
 							<div class="sign__group">
 								<label><font style="font-size:13px;">真实姓名
-								<input type="text" id="stuRealName" class="sign__input" placeholder="真实姓名"></font></label>
+								<input type="text" id="stuRealName" class="sign__input" placeholder="真实姓名" required="required"></font></label>
 							</div>
 							<div class="sign__group">
 								<span><font style="font-size:13px;">真实性别</font>
@@ -140,7 +140,7 @@
 							</div>
 							<div class="sign__group">
 								<label><font style="font-size:13px;">出生日期
-								<input type="date" id="stuBirth" class="sign__input" placeholder="出生日期" ></font></label>
+								<input type="date" id="stuBirth" class="sign__input" placeholder="出生日期" required="required"></font></label>
 							</div>
 							<div class="sign__group">
 								<span><font style="font-size:13px;">学历&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -159,15 +159,15 @@
 							</div>
 							<div class="sign__group">
 								<label><font style="font-size:13px;">毕业院校
-									<input type="text" id="stuSchool" class="sign__input" placeholder="毕业院校"></font></label>
+									<input type="text" id="stuSchool" class="sign__input" placeholder="毕业院校" required="required"></font></label>
 							</div>
 							<div class="sign__group">
 								<label><font style="font-size:13px;">毕业专业
-									<input type="text" id="stuMajor" class="sign__input" placeholder="专业"></font></label>
+									<input type="text" id="stuMajor" class="sign__input" placeholder="专业" required="required"></font></label>
 							</div>
 							<div class="sign__group">
 								<label><font style="font-size:13px;">毕业日期
-								<input type="date" id="stuGraduateDate" class="sign__input" placeholder="出生日期" ></font></label>
+								<input type="date" id="stuGraduateDate" class="sign__input" placeholder="出生日期" required="required"></font></label>
 							</div>
 							<div class="sign__group">
 								<label><font style="font-size:13px;">在校经历
@@ -181,7 +181,7 @@
 								<label><font style="font-size:13px;">期望城市
 									<input type="text" id="stuExpectCity" class="sign__input" placeholder="期望城市"></font></label>
 							</div>
-							<button class="sign__btn" type="button"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册</font></font></span></button>
+							<button class="sign__btn" type="submit"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册</font></font></span></button>
 
 							<span class="sign__text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">已经有帐号了？</font></font><a href="stuSignIn.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">登入！</font></font></a></span>
 						</form>

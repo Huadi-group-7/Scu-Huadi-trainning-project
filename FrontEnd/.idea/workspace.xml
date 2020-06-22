@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab1efb47-07fc-4c11-a3c3-c278b9d3643f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assest/js/stuSignUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assest/js/comSignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/comSignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assest/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comSignIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/comSignIn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/comSignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stuSignIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/stuSignIn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stuSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/stuSignUp.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,7 +116,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
