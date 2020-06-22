@@ -1,6 +1,6 @@
 let comInfo = {};
 window.onload = function () {
-    let email = getQueryVariable(variable);
+    let id = getQueryVariable("id");
 }
 
 function getQueryVariable(variable)
@@ -35,7 +35,7 @@ function comLogin(companyEmail, comPassword){
         success: function (data) {
             console.log(data);
 
-            window.location.href = "comPersonalCenter.html?"+ ;
+            window.location.href = "comPersonalCenter.html?id="+id;
         }
     })
 }
