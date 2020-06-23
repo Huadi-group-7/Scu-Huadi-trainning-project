@@ -5,7 +5,7 @@ window.onload = function () {
 
     USER = userId;
 
-    if (USER=="false"){
+    if (USER=="false" || USER==false){
         document.getElementById("title-signin").style.display = "initial";
         document.getElementById("title-signon").style.display = "initial";
     }
@@ -20,3 +20,8 @@ function selectAllReceiver(checkBox){
         arr[i].checked=checkBox.checked;
     }
 }
+
+function ChangePage(e) {
+    e.href = e.getAttribute("href") + "&id=" + USER
+}
+

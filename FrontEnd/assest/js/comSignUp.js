@@ -91,3 +91,7 @@
             window.alert("请确认密码！");
         }
   }
+
+ function ChangePage(e) {
+     e.href = e.getAttribute("href") + "&id=" + USER
+ }

@@ -7,7 +7,7 @@ window.onload = function () {
     USER = id;
     //USER = 'aec8ef35a519c5cecb22';
 
-    if (USER=="false"){
+    if (USER=="false" || USER==false){
         document.getElementById("title-signin").style.display = "initial";
         document.getElementById("title-signon").style.display = "initial";
     }
@@ -15,9 +15,8 @@ window.onload = function () {
         document.getElementById("title-mine").style.display = "initial";
     }
 
-    //get and shou stu info
-    getStuInfo(USER);
 
+    getStuInfo(USER);
     if (pc==false) pc=1;
 
     let ele = document.getElementById(pc);
@@ -38,7 +37,7 @@ function getQueryVariable(variable)
 }
 
 function getStuInfo(ID) {
-    if(ID==false){
+    if(ID==false || ID == "false"){
         alert("请先登录！");
         window.location.href = "index-2.html"
     }
@@ -95,6 +94,10 @@ function getMessage() {
         }
 
     })
+}
+
+function ChangePage(e) {
+    e.href = e.getAttribute("href") + "&id=" + USER
 }
 
 function updateInfo(){

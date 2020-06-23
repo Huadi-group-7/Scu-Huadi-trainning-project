@@ -6,7 +6,7 @@ window.onload = function () {
 
     USER = id;
 
-    if (USER=="false"){
+    if (USER=="false" || USER==false){
         document.getElementById("title-signin").style.display = "initial";
         document.getElementById("title-signon").style.display = "initial";
     }
@@ -114,4 +114,8 @@ function putNoAns() {
 
         document.getElementsByClassName("main-listing")[0].innerHTML += html;
 
+}
+
+function ChangePage(e) {
+    e.href = e.getAttribute("href") + "&id=" + USER
 }

@@ -13,7 +13,7 @@ window.onload = function () {
     appID = appId;
     //appID = "de71555b47ac2bd7a331";
 
-    if (USER=="false"){
+    if (USER=="false" || USER==false){
         document.getElementById("title-signin").style.display = "initial";
         document.getElementById("title-signon").style.display = "initial";
     }
