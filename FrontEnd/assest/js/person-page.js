@@ -5,7 +5,7 @@ window.onload = function () {
     let pc = getQueryVariable("pc");
     let id = getQueryVariable("id");
     USER = id;
-    USER = 'aec8ef35a519c5cecb22';
+    //USER = 'aec8ef35a519c5cecb22';
 
     if (USER=="false"){
         document.getElementById("title-signin").style.display = "initial";

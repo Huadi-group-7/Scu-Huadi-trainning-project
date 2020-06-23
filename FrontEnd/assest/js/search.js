@@ -14,7 +14,6 @@ window.onload = function () {
         document.getElementById("title-mine").style.display = "initial";
     }
 
-    if (ques==false) ques="公司";
     search(ques);
 
 
@@ -32,6 +31,20 @@ function getQueryVariable(variable)
 }
 
 function search(ques) {
+    if (ques==false) {
+        $.ajax({
+            type:'get',
+            async:'false',
+            url: "http://60.205.224.10:8000/findAll/sort",
+            crossDomain:'true',
+            success: function (data) {
+                if (data.status != 500){
+                    putAns(data.data.slice(0, 6));
+                }
+
+            }
+        });
+    }
     let anslist = new Array();
 
     $.ajax({
@@ -87,7 +100,7 @@ function putAns(list) {
             "<h3 class=\"post-title\"><a href=\"work.html?id=" + USER + "&appid=" + now.applicationId +
             "\">" + now.comName + "<br>"+ now.position +"</a> </h3><div class=\"post-meta clearfix\"></div></header> " +
             "<p>"+ now.positiondesc + "<a class=\"readmore-link\" href=\"work.html?id=\"" + USER
-            + "appid=" + now.applicationId + "\">Read more</a></p></article>";
+            + "appid=" + now.applicationId + "\">&nbsp&nbsp&nbspRead more</a></p></article>";
 
 
         document.getElementsByClassName("main-listing")[0].innerHTML += html;

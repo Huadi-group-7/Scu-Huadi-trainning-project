@@ -49,7 +49,7 @@
                             <li class="current-menu-item"><a href="index-2.html">主页</a></li>
                             <li><a href="search.html">搜索</a></li>
                             <li id="title-signin" style="display: none"><a href="#">登录</a>
-                                <ul class="sub-menu">
+                                <ul class="sub-menu" >
                                     <li><a href="stuSignIn.html">学生登录</a></li>
                                     <li><a href="comSignIn.html">企业登录</a></li>
                                 </ul>
@@ -62,11 +62,11 @@
                             </li>
                             <li id="title-mine" style="display: none"><a href="#" >我的</a>
                                 <ul class="sub-menu">
-                                    <li><a href="person-page.html?pc=1">我的首页</a></li>
-                                    <li><a href="person-page.html?pc=2">我的简历</a></li>
-                                    <li><a href="person-page.html?pc=3">我的消息</a></li>
-                                    <li><a href="" onclick="">修改密码</a></li>
-                                    <li><a href="" onclick="">注销登录</a></li>
+                                    <li><a href="person-page.html?pc=1" onclick=ChangePage()>我的首页</a></li>
+                                    <li><a href="person-page.html?pc=2" onclick=ChangePage()>我的简历</a></li>
+                                    <li><a href="person-page.html?pc=3" onclick=ChangePage()>我的消息</a></li>
+                                    <li><a href="" onclick = ChangePage()>修改密码</a></li>
+                                    <li><a href="index-2.html" onclick="">注销登录</a></li>
                                 </ul>
                             </li>
                             <li><a href="contact.html">联系我们</a></li>
@@ -222,8 +222,8 @@
                 <div class="span4">
                     <section class="widget"><h3 class="title">快速导航</h3>
                         <ul>
-                            <li><a href="index-2.html">首页</a> </li>
-                            <li><a href="search.html">查询</a> </li>
+                            <li><a href="index-2.html" onclick=ChangePage()>首页</a> </li>
+                            <li><a href="search.html" onclick=ChangePage()>查询</a> </li>
                         </ul>
                     </section>
                 </div>
