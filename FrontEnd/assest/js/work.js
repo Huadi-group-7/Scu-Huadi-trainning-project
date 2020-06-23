@@ -66,21 +66,23 @@ window.onload = function () {
 
     });
 
-    console.log(COMP);
+    var timeoutId;
+    timeoutId = setTimeout(function () {
+        if (USER !== COMP || COMP !== '') {
+            $.ajax({
+                type: 'get',
+                async: 'true',
+                url: "http://60.205.224.10:8000/recom/writehis/" + USER + "/" + COMP + "/C2S",
+                crossDomain: 'true',
+                success: function (data) {
+                    console.log(data);
+                    clearTimeout(timeoutId);
+                }
+            });
+        }
+    }, 500);
 
-    
 
-    if (USER !== COMP || COMP !== '') {
-        $.ajax({
-            type: 'get',
-            async: 'true',
-            url: "http://60.205.224.10:8000/recom/writehis/" + USER + "/" + COMP + "/C2S",
-            crossDomain: 'true',
-            success: function (data) {
-                console.log(data);
-            }
-        });
-    }
 
 
 
@@ -232,14 +234,16 @@ function subJob() {
     var file = document.getElementById('JobResume').files[0];
     let data = new FormData();
     data.append("file", file);
-    let aim_url = "http://60.205.224.10:8000/comment/" + USER + "/" + COMP + "/" + appID;
+    let aim_url = "http://60.205.224.10:8000/user/sendresume/" + USER + "/" + COMP + "/" + appID;
 
     $.ajax({
         type:'get',
         async:'false',
+        // headers: { "Origin": "127.0.0.1"},
         url: aim_url,
         data: data,
-        crossDomain:'true',
+        processData: false,
+        crossDomain: true,
         success: function (data) {
             alert("发送成功");
             window.location.reload();

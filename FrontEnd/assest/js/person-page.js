@@ -72,6 +72,8 @@ function getStuInfo(ID) {
 
 }
 
+
+
 function getMessage() {
     $.ajax({
         type:'get',
