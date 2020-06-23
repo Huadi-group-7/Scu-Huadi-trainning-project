@@ -7,6 +7,14 @@ window.onload = function () {
     USER = id;
     USER = 'aec8ef35a519c5cecb22';
 
+    if (USER=="false"){
+        document.getElementById("title-signin").style.display = "initial";
+        document.getElementById("title-signon").style.display = "initial";
+    }
+    else{
+        document.getElementById("title-mine").style.display = "initial";
+    }
+
     //get and shou stu info
     getStuInfo(USER);
 
@@ -32,7 +40,7 @@ function getQueryVariable(variable)
 function getStuInfo(ID) {
     if(ID==false){
         alert("请先登录！");
-        window.location.href = "index.html"
+        window.location.href = "index-2.html"
     }
     let aim_url =  'http://60.205.224.10:8000/findinformation/' + ID;
     $.ajax({
@@ -46,7 +54,7 @@ function getStuInfo(ID) {
 
             if (data.data.length<=0){
                 alert("请先登录！");
-                window.location.href = "index.html"
+                window.location.href = "index-2.html"
             }
             else{
                 user_info = data.data[0];

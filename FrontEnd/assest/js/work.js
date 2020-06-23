@@ -1,16 +1,25 @@
 let app_info = {};
-let appID = 0;
-let userID = 0;
+let appID = '';
+let USER = '';
 
 window.onload = function () {
+
 
     let appId = getQueryVariable('appid');
     let userId = getQueryVariable('id');
 
-    userID = userId;
+    USER = userId;
     //userID = "aec8ef35a519c5cecb22";
     appID = appId;
     //appID = "de71555b47ac2bd7a331";
+
+    if (USER=="false"){
+        document.getElementById("title-signin").style.display = "initial";
+        document.getElementById("title-signon").style.display = "initial";
+    }
+    else{
+        document.getElementById("title-mine").style.display = "initial";
+    }
 
     let aim_url =  'http://60.205.224.10:8000/informatio/application/' + appID;
 
@@ -25,7 +34,7 @@ window.onload = function () {
 
             if (data.data.length<=0){
                 alert("没有该招聘");
-                window.location.href = "index.html"
+                window.location.href = "index-2.html"
             }
             else{
                 app_info = data.data[0];
@@ -132,7 +141,8 @@ function getQueryVariable(variable)
 }
 
 function putInfo(workdata) {
-    document.getElementById("com_name").value = workdata.comName;
+    document.getElementById("com_link").href = ""
+    document.getElementById("com_name").innerText = workdata.comName;
     document.getElementById("com_desc").innerText = workdata.companydesc;
     document.getElementById("pos").innerText = workdata.position;
     document.getElementById("pos_desc").innerText = workdata.positiondesc;
@@ -161,7 +171,7 @@ function sendMessage() {
 
             if (data.data.length<=0){
                 alert("error");
-                window.location.href = "index.html"
+                window.location.href = "index-2.html"
             }
             else{
                 let aim_url = "http://60.205.224.10:8000/comment/" + userID + "/" + data.data[0].companyId + "/" + appID + "/" + message;

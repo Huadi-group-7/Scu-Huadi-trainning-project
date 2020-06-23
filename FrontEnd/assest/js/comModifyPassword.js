@@ -2,6 +2,19 @@ let companyId = getQueryVariable("id");
 window.onload = function () {
     getComInfo();
 }
+window.onload = function () {
+    let userId = getQueryVariable('id');
+
+    USER = userId;
+
+    if (USER=="false"){
+        document.getElementById("title-signin").style.display = "initial";
+        document.getElementById("title-signon").style.display = "initial";
+    }
+    else{
+        document.getElementById("title-mine").style.display = "initial";
+    }
+}
 
 function getQueryVariable(variable)
 {

@@ -20,7 +20,7 @@ function toModifyPassword(){
     //window.alert("get into function");
     let id = getQueryVariable("id");
     window.alert(id);
-    window.location.href = "modifyPassword.html?id="+id;
+    window.location.href = "comModifyPassword.html?id="+id;
 }
 function logout(){
     window.location.href = "comSignIn.html";
