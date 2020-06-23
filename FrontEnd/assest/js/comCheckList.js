@@ -77,3 +77,8 @@ function toCheck(){
     let rid = checkResumeIds[i];
     window.location.href = "comCheckApplication.html?resumeId=" + rid;
 }
+
+
+function ChangePage(e) {
+    e.href = e.getAttribute("href") + "&id=" + USER
+}

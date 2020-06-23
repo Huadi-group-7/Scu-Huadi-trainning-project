@@ -148,3 +148,7 @@ function toComCheckList(i){
     let appId = appIds[i];
     window.location.href= "comCheckList.html?id=" + comId + "&appId=" + appId;
 }
+
+function ChangePage(e) {
+    e.href = e.getAttribute("href") + "&id=" + USER
+}

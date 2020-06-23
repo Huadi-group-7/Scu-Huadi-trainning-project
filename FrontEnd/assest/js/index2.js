@@ -47,3 +47,7 @@ function putNoAns() {
         document.getElementsByClassName("main-listing2")[0].innerHTML += html;
 
 }
+
+function ChangePage(e) {
+    e.href = e.getAttribute("href") + "&id=" + USER
+}

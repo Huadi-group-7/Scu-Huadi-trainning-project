@@ -101,3 +101,6 @@ function getQueryVariable(variable)
         }
   }
 
+function ChangePage(e) {
+    e.href = e.getAttribute("href") + "&id=" + USER
+}
