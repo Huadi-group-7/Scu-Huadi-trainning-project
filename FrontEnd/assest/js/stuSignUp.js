@@ -1,21 +1,3 @@
- function PreviewImage(imgFile) {
-    var pattern = /(\.*.jpg$)|(\.*.png$)|(\.*.jpeg$)|(\.*.bmp$)|(\.*.svg$)/;
-    if (!pattern.test(imgFile.value)) {
-      alert("系统仅支持jpg/jpeg/png/gif/bmp格式的照片！");
-      imgFile.focus();
-    } else {
-      var path;
-      if (document.all) {//IE
-        imgFile.select();
-        path = document.selection.createRange().text;
-        document.getElementById("imgPreview").innerHTML = "";
-        document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
-      } else {//FF
-        path = URL.createObjectURL(imgFile.files[0]);
-        document.getElementById("imgPreview").innerHTML = "<img src='"+path+"'/>";
-      }
-    }
-  }
   function checkPassword(){
   var notice = "两次密码输入不一致";
   if(document.getElementById("stuPassword").value != document.getElementById("stuPasswordAgain").value){
@@ -35,6 +17,30 @@
          if(pair[0] == variable){return pair[1];}
      }
      return(false);
+ }
+ function stuSignUp(){
+    let stuRegisterEmail = document.getElementById("stuEmail").value;
+    let stuRegisterPassword = document.getElementById("stuPassword").value;
+    let code = document.getElementById("code").value;
+    let stuEnsurePassword = document.getElementById("stuPasswordAgain").value;
+    if(stuEnsurePassword == stuRegisterPassword){
+        let aim_url = 'http://60.205.224.10:8000/user/register/' + stuRegisterEmail + "/" + code + "/" + stuRegisterPassword;
+        $.ajax({
+            type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
+
+            success: function (data) {
+                console.log(data);
+                window.alert(data.msg);
+                window.location.href = "stuSignIn.html";
+            }
+        })
+        }
+        else{
+            window.alert("请确认密码！");
+        }
  }
 
  function ChangePage(e) {
