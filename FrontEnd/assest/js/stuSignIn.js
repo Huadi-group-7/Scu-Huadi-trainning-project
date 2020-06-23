@@ -30,6 +30,7 @@ function comLogin(){
         success: function (data) {
             console.log(data);
             user_id = data.user_id;
+            alert("a");
             window.location.href = "person-page.html?id="+user_id;
         }
     })

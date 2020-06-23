@@ -53,7 +53,8 @@
 
             success: function (data) {
                 console.log(data);
-                //window.alert(data.msg);
+
+                //window.location.href = "stuSignIn.html";
             }
         })
 

@@ -52,10 +52,15 @@ function getStuInfo(ID) {
             console.log(data);
 
             if (data.data.length<=0){
-                alert("请先登录！");
-                window.location.href = "index-2.html"
+
             }
             else{
+                document.getElementById("first_1").style.display = "none";
+                document.getElementById("first_2").style.display = "none";
+                document.getElementById("first_3").style.display = "none";
+                document.getElementById("first_4").style.display = "none";
+                document.getElementById("first_5").style.display = "none";
+                document.getElementById("first_6").style.display = "none";
                 user_info = data.data[0];
                 putInfo(data.data[0]);
                 getMessage(USER);
@@ -103,6 +108,7 @@ function ChangePage(e) {
 function updateInfo(){
     let aim_url = 'http://60.205.224.10:8000/information/' + USER;
 
+    let new_name = document.getElementById("name").value;
     let new_sex = document.getElementById("sex").value;
     let new_birth = document.getElementById("birth").value;
     let new_school = document.getElementById("school").value;
@@ -110,8 +116,10 @@ function updateInfo(){
     let new_major = document.getElementById("major").value;
     let new_workplace = document.getElementById("workplace").value;
     let new_exp = document.getElementById("experience").value;
+    let new_work = document.getElementById("work").value;
+    let new_graduatetime = document.getElementById("graduatetime").value;
 
-    console.log(user_info)
+    console.log(user_info);
 
     let data = {information: [{
             'sex': new_sex,
@@ -121,9 +129,9 @@ function updateInfo(){
             'professional': new_major,
             'workaddress': new_workplace,
             'experience': new_exp,
-            "realname": user_info.entity.realname,
-            "graduatetime": user_info.entity.graduatetime,
-            "work": user_info.entity.work
+            "realname": new_name,
+            "graduatetime": new_work,
+            "work": new_graduatetime
     }]};
 
 
@@ -137,7 +145,7 @@ function updateInfo(){
         success: function (data) {
             console.log(data);
 
-            window.location.href = "person-page.html?id=" + USER + "pc=1"
+            window.location.href = "person-page.html?id=" + USER + "&pc=1"
         }
 
     });
@@ -146,6 +154,7 @@ function updateInfo(){
 }
 
 function putInfo(userdata) {
+    document.getElementById("name").value = userdata.entity.realname;
     document.getElementById("stu_name").innerText = userdata.entity.realname;
     document.getElementById("sex").value = userdata.entity.sex;
     document.getElementById("birth").value = userdata.entity.birthdate;
@@ -154,6 +163,8 @@ function putInfo(userdata) {
     document.getElementById("major").value = userdata.entity.professional;
     document.getElementById("workplace").value = userdata.entity.workaddress;
     document.getElementById("experience").innerText = userdata.entity.experience;
+    document.getElementById("work").value = userdata.entity.work;
+    document.getElementById("graduatetime").value = userdata.entity.graduatetime;
 }
 
 function deleteCom(commentId) {

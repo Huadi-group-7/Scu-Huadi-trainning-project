@@ -66,7 +66,11 @@ window.onload = function () {
 
     });
 
-    if (USER !== COMP) {
+    console.log(COMP);
+
+    
+
+    if (USER !== COMP || COMP !== '') {
         $.ajax({
             type: 'get',
             async: 'true',
