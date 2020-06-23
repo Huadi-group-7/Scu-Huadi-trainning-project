@@ -109,7 +109,7 @@
 								<input type="password" id="comPasswordAgain" class="sign__input" onchange="checkPassword()" placeholder="确认密码" required="required"></font></label>
 							</div>
 							<font style="color:red;"><p id="checkPassword"></p></font>
-							<div class="sign__group">
+							<!--<div class="sign__group">
 								<label><font style="font-size:13px;">公司性质
 								<input type="text" id="comNature" class="sign__input" placeholder="公司性质" required="required"></font></label>
 							</div>
@@ -134,12 +134,13 @@
 								<label><font style="font-size:13px;">成立日期
 								<input type="date" id="comSetupDate" class="sign__input" placeholder="公司成立日期" required="required"></font></label>
 							</div>
+							-->
 							<div class="sign__group">
 								<label><font style="font-size:13px;">公司邮箱
 									<input type="text" id="comEmail" class="sign__input" placeholder="公司邮箱" required="required"></font></label>
 							</div>
 
-							<div class="sign__group">
+						<!--	<div class="sign__group">
 								<label><font style="font-size:13px;">公司官网
 								<input type="text" id="comWeb" class="sign__input" placeholder="公司官网" required="required"></font></label>
 							</div>
@@ -147,10 +148,11 @@
 								<label><font style="font-size:13px;">公司法人
 								<input type="text" id="comLegalPerson" class="sign__input" placeholder="公司法人" required="required"></font></label>
 							</div>
+							-->
 
 
 							
-							<button class="sign__btn" type="submit"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册</font></font></span></button>
+							<button class="sign__btn" type="button" onclick="comRegister()"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册</font></font></span></button>
 
 							<span class="sign__text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">已经有帐号了？</font></font><a href="comSignIn.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">登入！</font></font></a></span>
 						</form>

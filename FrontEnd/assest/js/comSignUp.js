@@ -30,8 +30,8 @@
   }
   }
 
-  //判断comSignUpForm中是否有必要信息没有填入
-  /*function validateForm(){
+  /*判断comSignUpForm中是否有必要信息没有填入
+  function validateForm(){
     var name = document.getElementById("comName").value;
     var password = document.getElementById("comPassword").value;
     var passwordAgain = document.getElementById("comPasswordAgain").value;
@@ -51,3 +51,27 @@
     }
   }
   */
+  function comRegister(){
+    let comRegisterEmail = document.getElementById("comEmail").value;
+    let comRegisterPassword = document.getElementById("comPassword").value;
+    let comRegisterName = document.getElementById("comName").value;
+    let comEnsurePassword = document.getElementById("comPasswordAgain").value;
+    if(comEnsurePassword == comRegisterPassword){
+        let aim_url = 'http://60.205.224.10:8000/company/register/' + comRegisterEmail + "/" + comRegisterName + "/" + comRegisterPassword;
+        $.ajax({
+            type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
+
+            success: function (data) {
+                console.log(data);
+                window.alert(data.msg);
+                window.location.href = "comSignIn.html";
+            }
+        })
+        }
+        else{
+            window.alert("请确认密码！");
+        }
+  }

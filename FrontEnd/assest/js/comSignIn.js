@@ -1,6 +1,7 @@
 let comInfo = {};
+//let id = "gfhjrtyu56i";
 window.onload = function () {
-    let id = getQueryVariable("id");
+
 }
 
 function getQueryVariable(variable)
@@ -14,28 +15,22 @@ function getQueryVariable(variable)
     return(false);
 }
 
-function comLogin(companyEmail, comPassword){
-    let aim_url = 'http://60.205.224.10:8000/company/login' + companyEmail + comPassword;
-
+function comLogin(){
     let companyEmail = document.getElementById("comEmail").value;
     let comPassword = document.getElementById("comPassword").value;
 
-    let data = {information:[{
-            'companyEmail':companyEmail,
-            'comPassword':comPassword
-    }]};
+    let aim_url = 'http://60.205.224.10:8000/company/login/' + companyEmail + "/" + comPassword;
 
-    $ajax({
-        type:'post',
+    $.ajax({
+        type:'get',
         async:'false',
         url: aim_url,
         crossDomain:'true',
-        data: JSON.stringify(data),
-        contentType: 'text/plain',
+
         success: function (data) {
             console.log(data);
-
-            window.location.href = "comPersonalCenter.html?id="+id;
+            user_id = data.user_id;
+            window.location.href = "comPersonalCenter.html?id="+user_id;
         }
     })
 }
