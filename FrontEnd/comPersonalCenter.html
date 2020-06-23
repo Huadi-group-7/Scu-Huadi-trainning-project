@@ -100,7 +100,12 @@
                                                                         <hr>
                                                                             <div>
                                                                                 <label>公司名称*</label>
-                                                                                    <text name="comName" id="comName"></text>
+                                                                                    <input name="comName" id="comName" class="span4" type="text" size="22"/>
+                                                                            </div>
+                                                                        <hr>
+                                                                                <div>
+                                                                                <label>公司邮箱*</label>
+                                                                                    <span name="comEmail" id="comEmail"></span>
                                                                             </div>
                                                                         <hr>
                                                                             <div>
@@ -110,7 +115,7 @@
                                                                         <hr>
                                                                             <div>
                                                                                 <label for="comSetupDate">公司成立日期*</label>
-                                                                                <input name="comSetupDate" id="comSetupDate" class="span4" type="date" size="22"/>
+                                                                                <input name="comSetupDate" id="comSetupDate" class="span4" type="text" size="22"/>
                                                                             </div>
                                                                         <hr>
                                                                             <div class="costs-uploadfile-div">
@@ -140,13 +145,13 @@
                                                                             </div>
                                                                         <hr>
                                                                           <div>
-                                                                                <label for="comEmail">公司邮箱</label>
-                                                                                <input name="comEmail" id="comEmail" class="span4" type="text" size="22"/>
+                                                                                <label for="comEmail">接收简历的邮箱</label>
+                                                                                <input name="resumeEmail" id="resumeEmail" class="span4" type="text" size="22"/>
                                                                             </div>
                                                                         <hr>
                                                                            <div>
                                                                                    <button  name="comSaveInfo" id="comSaveInfo" class="button-save"
-                                                                                           onclick="">保存
+                                                                                           onclick="modifyInfo()">保存
                                                                                    </button>
                                                                            </div>
                                                                         <hr>
@@ -160,7 +165,7 @@
                                                                 <article class=" type-page  hentry clearfix">
                                                                         <h1 class="post-title">已发布招聘</h1>
                                                                         <div class="post-meta clearfix">
-                                                                                 <span><font style="color:red;">*</font>已发布招聘数量：</span>
+                                                                                 <span>已发布招聘数量：<span id="Released"></span></span>
                                                                         </div>
                                                                         <hr>
 
@@ -170,19 +175,10 @@
                                                                                    </button>
                                                                                 </a>
                                                                         <hr>
-                                                                                <p>您可以在此搜索已发布招聘名称</p>
-                                                                                <form id="searchWanted" class="search-form clearfix" method="get" action="#" autocomplete="off">
-                                                                                        <input class="search-term required" type="text" id="searchBox" name="searchBox" placeholder="Type your search terms here" title="* Please enter a search term!" />
-                                                                                        <input class="search-btn" type="submit" value="Search" />
-                                                                                        <div id="search-error-container"></div>
-                                                                                </form>
+
                                                                         <!--已发布的招聘的卡片-->
-                                                                        <hr>
-                                                                        <div class="support-widget" name="releasedWanted" style="width:35%;" onclick="">
-                                                                                <span class="wantedName"><font size="3">招聘名称：</font></span><br>
-                                                                                <span class="posNum">职位数量：</span><br>
-                                                                                <span class="passedNum">已通过人数：</span><br>
-                                                                                <span class="wantedState">状态：</span>
+                                                                        <div id="applicationList">
+
                                                                         </div>
 
 
@@ -344,6 +340,7 @@
 
 
                 <script type='text/javascript' src='assest/js/comPersonalCenter.js'></script>
+
 
         </body>
 </html>

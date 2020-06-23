@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab1efb47-07fc-4c11-a3c3-c278b9d3643f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assest/js/comPersonalCenter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assest/js/modifyPassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assest/js/stuModifyPassword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assest/js/comCheckList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assest/js/comSignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/comSignIn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assest/js/comSignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/comSignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assest/js/modifyPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/modifyPassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comCheckList.html" beforeDir="false" afterPath="$PROJECT_DIR$/comCheckList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comPersonalCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/comPersonalCenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comSignIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/comSignIn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/comSignUp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modifyPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/modifyPassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stuSignIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/stuSignIn.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

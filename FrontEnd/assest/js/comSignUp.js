@@ -51,13 +51,29 @@
     }
   }
   */
+  function getCode(){
+    let email = document.getElementById("comEmail").value;
+    let aim_url = 'http://60.205.224.10:8000/gain/code/' + email;
+    $.ajax({
+            type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
+
+            success: function (data) {
+                console.log(data);
+                //window.alert(data.msg);
+            }
+        })
+
+  }
   function comRegister(){
     let comRegisterEmail = document.getElementById("comEmail").value;
     let comRegisterPassword = document.getElementById("comPassword").value;
-    let comRegisterName = document.getElementById("comName").value;
+    let code = document.getElementById("code").value;
     let comEnsurePassword = document.getElementById("comPasswordAgain").value;
     if(comEnsurePassword == comRegisterPassword){
-        let aim_url = 'http://60.205.224.10:8000/company/register/' + comRegisterEmail + "/" + comRegisterName + "/" + comRegisterPassword;
+        let aim_url = 'http://60.205.224.10:8000/company/register/' + comRegisterEmail + "/" + code + "/" + comRegisterPassword;
         $.ajax({
             type:'get',
             async:'false',

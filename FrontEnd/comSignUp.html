@@ -94,11 +94,25 @@
 								<h3 class="header_nav">智慧就业大数据大数据平台-公司注册</h3>
 
 
-							<div class="sign__group">
+							<!--<div class="sign__group">
 								<label><font style="font-size:13px;">公司名称
 								<input type="text" id="comName" class="sign__input" placeholder="公司名称/账户名" required="required"></font></label>
+							</div>-->
+							<div class="sign__group">
+								<label><font style="font-size:13px;">公司邮箱
+									<input type="text" id="comEmail" class="sign__input" placeholder="公司邮箱" required="required"></font></label>
 							</div>
-
+							<div class="sign__group">
+								<div><label><font style="font-size:13px;">邮箱验证
+									<input type="text" id="code" class="sign__input" style="width:40%" placeholder="验证码" required="required">
+									<button class="sign__btn" type="button" style="width:30%;margin:12" onclick="getCode()">
+										<span>
+											<font style="vertical-align: inherit;">发送验证码
+											</font>
+										</span>
+									</button>
+								</font></label></div>
+							</div>
 							<div class="sign__group">
 								<label><font style="font-size:13px;">输入密码
 									<input type="password" id="comPassword" class="sign__input" placeholder="密码" required="required"></font></label>
@@ -135,10 +149,7 @@
 								<input type="date" id="comSetupDate" class="sign__input" placeholder="公司成立日期" required="required"></font></label>
 							</div>
 							-->
-							<div class="sign__group">
-								<label><font style="font-size:13px;">公司邮箱
-									<input type="text" id="comEmail" class="sign__input" placeholder="公司邮箱" required="required"></font></label>
-							</div>
+
 
 						<!--	<div class="sign__group">
 								<label><font style="font-size:13px;">公司官网

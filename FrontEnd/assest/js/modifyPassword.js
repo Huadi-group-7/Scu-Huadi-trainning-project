@@ -1,5 +1,6 @@
-
+let companyId = getQueryVariable("id");
 window.onload = function () {
+    getComInfo();
 }
 
 function getQueryVariable(variable)
@@ -24,8 +25,28 @@ function getQueryVariable(variable)
   }
 
   }
+  function getComInfo(){
+    //let comId = getQueryVariable("id");
+    if(companyId == false){
+        alert("请先登录！");
+        window.location.href = "comSignIn.html";
+    }
+    let aim_url = 'http://60.205.224.10:8000/company/findcominformation/' + companyId;
+    $.ajax({
+        type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
+
+            success: function (data) {
+               // console.log(data);
+                document.getElementById("email").innerText = data.comemail;
+
+            }
+    })
+}
   function getCode(){
-    let email = document.getElementById("email").value;
+    let email = document.getElementById("email").innerText;
     let aim_url = 'http://60.205.224.10:8000/gain/code/' + email;
     $.ajax({
             type:'get',
@@ -41,7 +62,7 @@ function getQueryVariable(variable)
 
   }
   function submitPassword(){
-    let companyId = getQueryVariable("id");
+
     let companyEmail = document.getElementById("email").value;
     let comNewPassword = document.getElementById("password").value;
     let comNewPasswordAgain = document.getElementById("ensurePassword").value;
@@ -57,9 +78,9 @@ function getQueryVariable(variable)
                 success: function (data) {
                     console.log(data);
                     window.alert(data);
-                    if(){
-                        window.location.href = "comPersonalCenter.html?id=" + companyId;
-                    }
+
+                    window.location.href = "comPersonalCenter.html?id=" + companyId;
+
 
 
                 }
