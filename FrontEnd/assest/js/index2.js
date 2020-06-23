@@ -1,18 +1,30 @@
 
-window.onload =function search() {
+window.onload =function() {
 
-        $.ajax({
-            type:'get',
-            async:'false',
-            url: "http://60.205.224.10:8000/findAll/sort",
-            crossDomain:'true',
-            success: function (data) {
-                if (data.status != 500){
-                    putAns(data.data.slice(0, 6));
-                }
+    let id = getQueryVariable("id");
 
+    USER = id;
+
+    if (USER=="false" || USER==false){
+        document.getElementById("title-signin").style.display = "initial";
+        document.getElementById("title-signon").style.display = "initial";
+    }
+    else{
+        document.getElementById("title-mine").style.display = "initial";
+    }
+
+    $.ajax({
+        type:'get',
+        async:'false',
+        url: "http://60.205.224.10:8000/findAll/sort",
+        crossDomain:'true',
+        success: function (data) {
+            if (data.status != 500){
+                putAns(data.data.slice(0, 6));
             }
-        });
+
+        }
+    });
  
     let anslist = new Array();
 
@@ -21,6 +33,17 @@ window.onload =function search() {
     if(document.getElementsByClassName("main-listing2")[0].innerHTML == ''){
         putNoAns();
     }
+}
+
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
 }
 
 function putAns(list) {

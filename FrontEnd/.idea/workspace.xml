@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab1efb47-07fc-4c11-a3c3-c278b9d3643f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assest/js/comCheckApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/comCheckApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assest/js/comCheckList.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/comCheckList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assest/js/comModifyPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/comModifyPassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assest/js/comPersonalCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/comPersonalCenter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assest/js/comSignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/comSignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assest/js/comUncheckApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/comUncheckApplication.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assest/js/index2.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/index2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assest/js/newMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/newMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assest/js/stuSignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/stuSignUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assest/js/work.js" beforeDir="false" afterPath="$PROJECT_DIR$/assest/js/work.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,37 +17,50 @@
     <session id="399643854">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
-          <entry key="js" value="17" />
+          <entry key="html" value="3" />
+          <entry key="js" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="17" />
+          <entry key="HTML" value="3" />
+          <entry key="JavaScript" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="13" />
-          <entry key="js" value="15" />
+          <entry key="js" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="13" />
-          <entry key="JavaScript" value="15" />
+          <entry key="JavaScript" value="28" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assest/js/person-page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="27" selection-start-line="27" selection-end-line="36" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!block;n#updateInfo#0" />
+                <element signature="n#!!block;n#putInfo#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assest/js/work.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="814">
-              <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
+            <state relative-caret-position="833">
+              <caret line="204" column="1" selection-start-line="204" selection-start-column="1" selection-end-line="204" selection-end-column="1" />
               <folding>
                 <element signature="n#!!block;n#getQueryVariable#0" />
               </folding>
@@ -62,11 +71,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assest/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1542" />
+            <state relative-caret-position="57">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assest/js/stuModifyPassword.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -77,27 +88,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assest/js/comSignIn.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-41" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assest/js/person-page.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1219">
-              <folding>
-                <element signature="n#!!block;n#updateInfo#0" />
-                <element signature="n#!!block;n#putInfo#0" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assest/js/comSignUp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="781">
+            <state relative-caret-position="743">
               <caret line="98" selection-start-line="98" selection-end-line="98" />
             </state>
           </provider>
@@ -106,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assest/js/comUncheckApplication.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="814">
+            <state relative-caret-position="1783">
               <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
             </state>
           </provider>
@@ -115,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assest/js/index2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+            <state relative-caret-position="323">
+              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -124,15 +121,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assest/js/stuSignUp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="703">
+              <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assest/js/newMessage.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -170,8 +171,10 @@
         <option value="$PROJECT_DIR$/assest/js/comPersonalCenter.js" />
         <option value="$PROJECT_DIR$/assest/js/comSignUp.js" />
         <option value="$PROJECT_DIR$/assest/js/comUncheckApplication.js" />
-        <option value="$PROJECT_DIR$/assest/js/index2.js" />
+        <option value="$PROJECT_DIR$/assest/js/newMessage.js" />
+        <option value="$PROJECT_DIR$/assest/js/stuSignUp.js" />
         <option value="$PROJECT_DIR$/assest/js/work.js" />
+        <option value="$PROJECT_DIR$/assest/js/index2.js" />
       </list>
     </option>
   </component>
@@ -282,7 +285,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44299000" />
+    <option name="totallyTimeSpent" value="44655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -379,26 +382,6 @@
           <folding>
             <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
-          <folding>
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#6528#6533#0" expanded="true" />
-            <element signature="e#7791#7796#0" expanded="true" />
-            <element signature="e#9055#9060#0" expanded="true" />
-            <element signature="e#10318#10323#0" expanded="true" />
-            <element signature="e#11900#11905#0" expanded="true" />
-            <element signature="e#13163#13168#0" expanded="true" />
-            <element signature="e#14427#14432#0" expanded="true" />
-            <element signature="e#15690#15695#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -501,30 +484,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6528#6533#0" expanded="true" />
+            <element signature="e#7791#7796#0" expanded="true" />
+            <element signature="e#9055#9060#0" expanded="true" />
+            <element signature="e#10318#10323#0" expanded="true" />
+            <element signature="e#11900#11905#0" expanded="true" />
+            <element signature="e#13163#13168#0" expanded="true" />
+            <element signature="e#14427#14432#0" expanded="true" />
+            <element signature="e#15690#15695#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assest/js/comCheckApplication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
+        <state relative-caret-position="2353">
           <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assest/js/comCheckList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
+        <state relative-caret-position="1577">
           <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assest/js/comModifyPassword.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
+        <state relative-caret-position="1764">
           <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assest/js/comPersonalCenter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
+        <state relative-caret-position="1175">
           <caret line="153" column="1" selection-start-line="153" selection-start-column="1" selection-end-line="153" selection-end-column="1" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -532,38 +535,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assest/js/comSignIn.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/assest/js/comSignUp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
+        <state relative-caret-position="743">
           <caret line="98" selection-start-line="98" selection-end-line="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assest/js/comUncheckApplication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
+        <state relative-caret-position="1783">
           <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assest/js/index2.js">
+    <entry file="file://$PROJECT_DIR$/assest/js/newMessage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+        <state relative-caret-position="475">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assest/js/comSignIn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assest/js/newMessage.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assest/js/person-page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1219">
+        <state relative-caret-position="377">
+          <caret line="27" selection-start-line="27" selection-end-line="36" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#updateInfo#0" />
             <element signature="n#!!block;n#putInfo#0" />
@@ -571,32 +570,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assest/js/stuSignUp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assest/js/work.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="204" column="1" selection-start-line="204" selection-start-column="1" selection-end-line="204" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#getQueryVariable#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assest/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1542" />
+        <state relative-caret-position="57">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assest/js/index2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assest/js/stuModifyPassword.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="71" column="20" lean-forward="true" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assest/js/stuSignUp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assest/js/work.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!block;n#getQueryVariable#0" />
-          </folding>
         </state>
       </provider>
     </entry>
