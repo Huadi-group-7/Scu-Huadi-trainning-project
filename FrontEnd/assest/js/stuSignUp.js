@@ -42,6 +42,22 @@
             window.alert("请确认密码！");
         }
  }
+ function getCode(){
+    let email = document.getElementById("comEmail").value;
+    let aim_url = 'http://60.205.224.10:8000/gain/code/' + email;
+    $.ajax({
+            type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
+
+            success: function (data) {
+                console.log(data);
+                //window.alert(data.msg);
+            }
+        })
+
+  }
 
  function ChangePage(e) {
      e.href = e.getAttribute("href") + "&id=" + USER
