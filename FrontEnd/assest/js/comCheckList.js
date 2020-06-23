@@ -39,7 +39,7 @@ function putUncheckInfo(ca){
     if(ca.length > 0){
         for(let i = 0; i < ca.length; i++){
             uncheckResumeIds[i] = ca[i].entity.resumeId;
-            document.getElementById("uncheckedResume").innerHTML += "<hr><span id=\"uncheck" + i + "\"  onclick=\"toUnCheck("+ i + ")\">"+(i+1)+".点击查看进入审核</span>";
+            document.getElementById("uncheckedResume").innerHTML += "<hr><span id=\"uncheck" + i + "\"  onclick=\"toUnCheck("+ i + ")\">"+(i+1)+".点击查看进入审核("+uncheckResumeIds[i]+")</span>";
         }
     }
 }
@@ -69,16 +69,33 @@ function putCheckInfo(ca){
     if(ca.length > 0){
         for(let i = 0; i < ca.length; i++){
             checkResumeIds[i] = ca[i].entity.resumeId;
-            document.getElementById("checkedResume").innerHTML += "<hr><span id=\"check" + i + "\"  onclick=\"toCheck("+ i + ")\">"+(i+1)+".点击进入审核页面可下载简历</span>";
+            document.getElementById("checkedResume").innerHTML += "<hr><span id=\"check" + i + "\"  onclick=\"toView("+ i + ")\">"+(i+1)+".点击进入审核页面可下载简历</span>";
         }
     }
 }
-function toCheck(){
-    let rid = checkResumeIds[i];
-    window.location.href = "comCheckApplication.html?resumeId=" + rid;
+function toCheck(i){
+    let rid = uncheckResumeIds[i];
+    let companyId = getQueryVariable("id");
+    let applicationId = getQueryVariable("appId");
+    let aim_url = 'http://60.205.224.10:8000/company/resumeAcees/' + companyId + "/"+ applicationId +"/"+rid;
+    $.ajax({
+        type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
+
+            success: function (data) {
+                    console.log(data);
+                    window.location.href = "comCheckApplication.html?id="+ companyId +"&appId=" + applicationId + "&resumeId=" + rid;
+                    //window.location.href = downloadUrl;
+
+            }
+    })
+
 }
-
-
-function ChangePage(e) {
-    e.href = e.getAttribute("href") + "&id=" + USER
+function toView(i){
+    let companyId = getQueryVariable("id");
+    let applicationId = getQueryVariable("appId");
+    let rid = checkResumeIds[i];
+    window.location.href = "comCheckApplication.html?id="+ companyId +"&appId=" + applicationId + "&resumeId=" + rid;
 }
