@@ -43,7 +43,7 @@
         }
  }
  function getCode(){
-    let email = document.getElementById("comEmail").value;
+    let email = document.getElementById("stuEmail").value;
     let aim_url = 'http://60.205.224.10:8000/gain/code/' + email;
     $.ajax({
             type:'get',
