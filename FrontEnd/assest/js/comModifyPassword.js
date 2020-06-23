@@ -90,9 +90,13 @@ function getQueryVariable(variable)
 
                 success: function (data) {
                     console.log(data);
-                    window.alert(data);
-
-                    window.location.href = "comPersonalCenter.html?id=" + companyId;
+                    //window.alert(data);
+                    if(comNewPassword == comNewPasswordAgain){
+                        window.location.href = "comPersonalCenter.html?id=" + companyId;
+                    }
+                    else{
+                        alert("请确认密码！");
+                    }
 
 
 

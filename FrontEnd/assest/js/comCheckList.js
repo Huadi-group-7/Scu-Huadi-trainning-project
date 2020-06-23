@@ -99,3 +99,8 @@ function toView(i){
     let rid = checkResumeIds[i];
     window.location.href = "comCheckApplication.html?id="+ companyId +"&appId=" + applicationId + "&resumeId=" + rid;
 }
+function toComments(){
+    let comId = getQueryVariable("id");
+    let appId = getQueryVariable("appId");
+    window.location.href = "comMessageList.html?id="+id+"&appId="+appId;
+}
