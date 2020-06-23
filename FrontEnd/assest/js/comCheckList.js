@@ -1,6 +1,8 @@
-let resumeIds = {};
+let uncheckResumeIds = {};
+let checkResumeIds={};
 window.onload = function () {
     getUncheckedResume();
+    getCheckedResume();
 }
 function getQueryVariable(variable)
 {
@@ -24,26 +26,54 @@ function getUncheckedResume(){
             crossDomain:'true',
 
             success: function (data) {
-                console.log(data);
-                //document.getElementById("comEmail").innerText = data.comemail;
-                putApplicationInfo(data.data[0]);
+                //console.log();
+                if(data.data != undefined){
+                    putUncheckInfo(data.data);
+                }
+
 
             }
     })
 }
-function putApplicationInfo(ca){
-    document.getElementById("applicationList").innerHTML = "";
+function putUncheckInfo(ca){
     if(ca.length > 0){
         for(let i = 0; i < ca.length; i++){
-            document.getElementById("applicationList").innerHTML += "<hr><div class=\"support-widget\" id=\""+ i + "\" name=\"unCheckedResume\" style=\"width:40%;\" onclick=\"toCheck(" + i + ")\"><span><font size=\"3\">真实姓名：<span id=\"realName"+ i +"\"></span></font></span><br><span>毕业学校：<span id=\"graduateSchool"+ i +"\" ></span></span><br><span>专业：<span id=\"major"+ i +"\"></span></span><br><span>学历：<span id=\"education"+ i +"\"></span></span></div>"
-            document.getElementById("realName"+i).innerText = ca[i].entity.;
-            document.getElementById("graduateSchool"+i).innerText = ca[i].entity.;
-            document.getElementById("major"+i).innerText = ca[i].entity.;
-            document.getElementById("education"+i).innerText = ca[i].entity.;
-            resumeIds[i] = ca[i].entity.applicationId;
+            uncheckResumeIds[i] = ca[i].entity.resumeId;
+            document.getElementById("uncheckedResume").innerHTML += "<hr><span id=\"uncheck" + i + "\"  onclick=\"toUnCheck("+ i + ")\">"+(i+1)+".点击查看进入审核</span>";
         }
     }
 }
-function toCheck(i){
+function toUnCheck(i){
+    let rid = uncheckResumeIds[i];
+    window.location.href = "comUncheckApplication.html?resumeId=" + rid;
+}
+function getCheckedResume(){
+    let comId = getQueryVariable("id");
+    let appId = getQueryVariable("appId");
+    //window.alert(appId);
+    let aim_url = "http://60.205.224.10:8000/findAll/accessresume/" + comId + "/" + appId;
+     $.ajax({
+        type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
 
+            success: function (data) {
+                if(data.data != undefined){
+                    putCheckInfo(data.data);
+                }
+            }
+    })
+}
+function putCheckInfo(ca){
+    if(ca.length > 0){
+        for(let i = 0; i < ca.length; i++){
+            checkResumeIds[i] = ca[i].entity.resumeId;
+            document.getElementById("checkedResume").innerHTML += "<hr><span id=\"check" + i + "\"  onclick=\"toCheck("+ i + ")\">"+(i+1)+".点击进入审核页面可下载简历</span>";
+        }
+    }
+}
+function toCheck(){
+    let rid = checkResumeIds[i];
+    window.location.href = "comCheckApplication.html?resumeId=" + rid;
 }

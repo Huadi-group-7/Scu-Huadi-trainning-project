@@ -8,7 +8,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>审核列表-智慧就业大数据分析平台</title>
+        <title>审核简历-智慧就业大数据分析平台</title>
 
         <link rel="shortcut icon" href="images/favicon.png" />
 
@@ -89,59 +89,47 @@
 
     <!-- Start of Page Container -->
     <div class="page-container">
-                        <div class="container">
-                                <div class="row">
+        <div class="container">
+            <div class="row">
 
-                                        <!-- start of page content -->
-                                        <div class="span8 page-content">
-                                                <dl class="accordion clearfix">
-                                                    <header class="clearfix">
-                                                        <h3>
-                                                            已收到简历
-                                                        </h3>
-                                                    </header>
-                                                        <dt id="1"><span></span>未审核简历</dt>
-                                                        <dd>
-                                                                <article class=" type-page  hentry clearfix">
-                                                                        <h2 class="post-title">未审核简历</h2>
-                                                                        <div id="uncheckedResume">
-                                                                    <!--未审核简历列表（可循环）-->
-                                                                        <!--------<hr>
-                                                                            <div class="support-widget" name="notCheckedApplication" style="width:40%;" onclick="">
-                                                                                <span class="realName"><font size="4">真实姓名</font></span><br>
-                                                                                <span class="graduateSchool">毕业学校：</span><br>
-                                                                                <span class="major">专业：</span><br>
-                                                                                <span class="education">学历：</span>
-                                                                        </div>-->
-                                                                    <!--列表结束-->
-                                                                        </div>
-                                                                </article>
-                                                        </dd>
+                <!-- start of page content -->
+                <div class="span8 main-listing">
 
-                                                        <dt id="2"><span></span>已审核简历</dt>
-                                                        <dd>
-                                                                <article class=" type-page  hentry clearfix">
-                                                                    <h2 class="post-title">已审核简历</h2>
-                                                                    <div id="checkedResume">
-                                                                    <!--未审核简历列表（可循环）-->
-                                                                        <!--------<hr>
-                                                                            <div class="support-widget" name="notCheckedApplication" style="width:40%;" onclick="">
-                                                                                <span class="realName"><font size="4">真实姓名</font></span><br>
-                                                                                <span class="graduateSchool">毕业学校：</span><br>
-                                                                                <span class="major">专业：</span><br>
-                                                                                <span class="education">学历：</span>
-                                                                        </div>-->
-                                                                    <!--列表结束-->
-                                                                        </div>
-                                                                </article>
+                    <article class="format-standard type-post hentry clearfix">
 
-                                                        </dd>
+                        <header class="clearfix">
+                            <h3>
+                                学生简历
+                            </h3>
+                        </header>
+                        <hr>
+                        <div>
+                                <label><strong>简历：</strong></label>
+                               <div id="downLoad" name="downLoad">
+                                   <span id="downloadResume" onclick="">下载简历</span>
+                               </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <span>
+                            <button  name="checkPass" id="checkPass" class="sign__btn" style="width:30%;" onclick="" >
+                                <span>
+                                    <font style="vertical-align: inherit;">审核通过</font>
+                                </span>
+                            </button>
+                            <button  name="checkNotPass" id="checkNotPass" class="sign__btn" style="width:30%;" onclick="" >
+                                <span>
+                                    <font style="vertical-align: inherit;">审核不通过</font>
+                                </span>
+                            </button>
+                            </span>
+                        </div>
 
-                                                </dl>
+                    </article>
 
-                                        </div>
-                                        <!-- end of page content -->
 
+
+                </div>
                 <!-- end of page content -->
 
 
@@ -265,7 +253,7 @@
     <script type='text/javascript' src='js/jquery.validate.minfc6b.js?ver=1.10.0'></script>
     <script type='text/javascript' src='js/custom5152.js?ver=1.0'></script>
 
-    <script type='text/javascript' src='assest/js/newMessage.js'></script>
-    <script type='text/javascript' src='assest/js/comCheckList.js'></script>
+    <script type='text/javascript' src='assest/js/comUncheckApplication.js'></script>
+
 </body>
 </html>
