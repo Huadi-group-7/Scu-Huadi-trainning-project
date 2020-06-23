@@ -1,6 +1,40 @@
+let app_info = {};
+let appID = 0;
+let userID = 0;
+
 window.onload = function () {
 
+    let appId = getQueryVariable('appid');
+    let userId = getQueryVariable('id');
 
+    userID = userId;
+    //userID = "aec8ef35a519c5cecb22";
+    appID = appId;
+    //appID = "de71555b47ac2bd7a331";
+
+    let aim_url =  'http://60.205.224.10:8000/informatio/application/' + appID;
+
+    $.ajax({
+        type:'get',
+        async:'false',
+        url: aim_url,
+        crossDomain:'true',
+
+        success: function (data) {
+            console.log(data);
+
+            if (data.data.length<=0){
+                alert("没有该招聘");
+                window.location.href = "index.html"
+            }
+            else{
+                app_info = data.data[0];
+                putInfo(data.data[0]);
+            }
+
+        }
+
+    });
 
     var chart_1 = Highcharts.chart('line-chart', {
         chart: {
@@ -84,4 +118,67 @@ window.onload = function () {
         }]
     });
 
+};
+
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+}
+
+function putInfo(workdata) {
+    document.getElementById("com_name").value = workdata.comName;
+    document.getElementById("com_desc").innerText = workdata.companydesc;
+    document.getElementById("pos").innerText = workdata.position;
+    document.getElementById("pos_desc").innerText = workdata.positiondesc;
+    document.getElementById("req").innerText = workdata.requirement;
+    document.getElementById("num").innerText = workdata.num;
+    document.getElementById("money").innerText = workdata.money;
+    document.getElementById("addr").innerText = workdata.address;
+    document.getElementById("tag").innerText = "TAG:  " + workdata.tag;
+    document.getElementById("updatetime").innerText = "上传时间：  " + workdata.uptime;
+}
+
+function sendMessage() {
+
+    let n_e = document.getElementById("commentform").getElementsByTagName("input");
+    user_name = n_e[0].value;
+    email = n_e[1].value;
+    let message = document.getElementById("comment").value;
+
+    $.ajax({
+        type:'get',
+        async:'false',
+        url: "http://60.205.224.10:8000/find/companyId/" + appID,
+        crossDomain:'true',
+        success: function (data) {
+            console.log(data);
+
+            if (data.data.length<=0){
+                alert("error");
+                window.location.href = "index.html"
+            }
+            else{
+                let aim_url = "http://60.205.224.10:8000/comment/" + userID + "/" + data.data[0].companyId + "/" + appID + "/" + message;
+
+                $.ajax({
+                    type:'get',
+                    async:'false',
+                    url: aim_url,
+                    crossDomain:'true',
+                    success: function (data) {
+                        alert("发送成功");
+                    }
+                });
+
+            }
+
+        }
+
+    });
 }

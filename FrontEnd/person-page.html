@@ -17,13 +17,6 @@
                 <link rel='stylesheet' id='responsive-css-css'  href='css/responsive5152.css?ver=1.0' type='text/css' media='all' />
                 <link rel='stylesheet' id='pretty-photo-css-css'  href='js/prettyphoto/prettyPhotoaeb9.css?ver=3.1.4' type='text/css' media='all' />
                 <link rel='stylesheet' id='main-css-css'  href='css/main5152.css?ver=1.0' type='text/css' media='all' />
-                <!--<link rel='stylesheet' id='custom-css-css'  href='css/custom5152.html?ver=1.0' type='text/css' media='all' />-->
-
-
-                <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-                <!--[if lt IE 9]>
-                <script src="js/html5.js"></script></script>
-                <![endif]-->
 
         </head>
 
@@ -49,7 +42,7 @@
                                                 <ul id="menu-top-menu" class="clearfix">
                                                     <li class="current-menu-item"><a href="index-2.html">主页</a></li>
                                                     <li><a href="search.html">搜索</a></li>
-                                                    <li id="title-signin" ><a href="#">登录</a>
+                                                    <li id="title-signin" style="display: none"><a href="#">登录</a>
                                                         <ul class="sub-menu" style="display: none">
                                                             <li><a href="stuSignIn.html">学生登录</a></li>
                                                             <li><a href="comSignIn.html">企业登录</a></li>
@@ -92,28 +85,67 @@
                                                         <dt id="1"><span></span>我的首页</dt>
                                                         <dd>
                                                                 <article class=" type-page  hentry clearfix">
-                                                                        <h1 class="post-title">Sample Page</h1>
-
+                                                                        <h1 id='stu_name' class="post-title">Name</h1>
                                                                         <hr>
 
-                                                                        <p>This is an example page. It’s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>
+                                                                        <div class="row-fluid">
+                                                                                <div style="width: 30%;float: left">
+                                                                                        <label style="font-size: larger">性别<span></span></label>
+                                                                                </div>
+                                                                                <div style="width: 70%;float: left">
+                                                                                        <input type="text" id="sex" class="required input-xlarge" value="">
+                                                                                </div>
 
-                                                                        <blockquote>
-                                                                                <p>Hi there! I’m a bike messenger by day, aspiring actor by night, and this is my blog. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin’ caught in the rain.)</p>
-                                                                        </blockquote>
+                                                                                <div style="width: 30%;float: left">
+                                                                                        <label style="font-size: larger">生日<span></span></label>
+                                                                                </div>
+                                                                                <div style="width: 70%;float: left">
+                                                                                        <input type="text" id="birth" class="required input-xlarge" value="">
+                                                                                </div>
 
-                                                                        <p>…or something like this:</p>
+                                                                                <div style="width: 30%;float: left">
+                                                                                        <label style="font-size: larger">毕业院校<span></span></label>
+                                                                                </div>
+                                                                                <div style="width: 70%;float: left">
+                                                                                        <input type="text" id="school" class="required input-xlarge" value="">
+                                                                                </div>
 
-                                                                        <blockquote>
-                                                                                <p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p>
-                                                                        </blockquote>
+                                                                                <div style="width: 30%;float: left">
+                                                                                        <label style="font-size: larger">学位<span></span></label>
+                                                                                </div>
+                                                                                <div style="width: 70%;float: left">
+                                                                                        <input type="text" id="level" class="required input-xlarge" value="">
+                                                                                </div>
 
-                                                                        <p>As a new WordPress user, you should go to <a href="#">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>
+                                                                                <div style="width: 30%;float: left">
+                                                                                        <label style="font-size: larger">专业<span></span></label>
+                                                                                </div>
+                                                                                <div style="width: 70%;float: left">
+                                                                                        <input type="text" id="major" class="required input-xlarge" value="">
+                                                                                </div>
+
+                                                                                <div style="width: 30%;float: left">
+                                                                                        <label style="font-size: larger">期望工作地<span></span></label>
+                                                                                </div>
+                                                                                <div style="width: 70%;float: left">
+                                                                                        <input type="text" id="workplace" class="required input-xlarge" value="">
+                                                                                </div>
+
+                                                                                <div style="width: 30%;float: left">
+                                                                                        <label>工作经验<span></span> </label>
+                                                                                </div>
+                                                                                <div style="width: 100%;float: left">
+                                                                                        <textarea name="message" id="experience" class="required span12" rows="6"></textarea>
+                                                                                </div>
+                                                                        </div>
+                                                                        <button onclick=updateInfo()>
+                                                                                保存
+                                                                        </button>
 
                                                                 </article>
                                                         </dd>
 
-                                                        <dt id="2"><span></span>我的简历</dt>
+                                                        <dt id="2"><span></span>我的投递</dt>
                                                         <dd>
                                                                 <article class=" type-page  hentry clearfix">
                                                                         <h1 class="post-title">Sample Page</h1>
@@ -139,24 +171,13 @@
 
                                                         <dt id="3"><span></span>我的消息</dt>
                                                         <dd>
-                                                                <article class=" type-page  hentry clearfix">
-                                                                        <h1 class="post-title">Sample Page</h1>
+                                                                <article class=" type-page  hentry clearfix" id="myComment">
+                                                                        <h1 class="post-title">我的留言</h1>
 
                                                                         <hr>
 
-                                                                        <p>This is an example page. It’s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>
 
-                                                                        <blockquote>
-                                                                                <p>Hi there! I’m a bike messenger by day, aspiring actor by night, and this is my blog. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin’ caught in the rain.)</p>
-                                                                        </blockquote>
 
-                                                                        <p>…or something like this:</p>
-
-                                                                        <blockquote>
-                                                                                <p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p>
-                                                                        </blockquote>
-
-                                                                        <p>As a new WordPress user, you should go to <a href="#">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>
 
                                                                 </article>
                                                         </dd>
@@ -174,14 +195,6 @@
                                                                 <h3 class="title">每日小贴士</h3>
                                                                 <p  id="daily-tag" class="intro">简历的不一定是越复杂越好，清晰明了才是最重要的</p>
                                                         </div>
-                                                </section>
-
-                                                <section class="widget"><h3 class="title">快速</h3>
-                                                        <ul>
-                                                                <li><a href="person-page.html?pc=1">我的首页</a></li>
-                                                                <li><a href="person-page.html?pc=2">我的简历</a></li>
-                                                                <li><a href="person-page.html?pc=3">我的消息</a></li>
-                                                        </ul>
                                                 </section>
 
                                                 <section class="widget">
