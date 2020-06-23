@@ -74,7 +74,7 @@ function modifyInfo(){
     let new_comName = document.getElementById("comName").value;
     let new_nature = document.getElementById("comNature").value;
     let new_setUpDate = document.getElementById("comSetUpDate").value;
-    let new_introduction = document.getElementById("comIntroduction").value;
+    let new_introduction = document.getElementById("comIntroduction").val();
     let new_address = document.getElementById("comAddress").value;
     let new_web = document.getElementById("comWeb").value;
     let new_email = document.getElementById("resumeEmail").value;
@@ -111,7 +111,7 @@ function putInfo(comData) {
     document.getElementById("comName").innerText = comData.cominfoEntity.companyName;
     document.getElementById("comNature").value = comData.cominfoEntity.companyName;
     document.getElementById("comSetUpDate").value = comData.cominfoEntity.comTime;
-    document.getElementById("comIntroduction").value = comData.cominfoEntity.description;
+    document.getElementById("comIntroduction").val() = comData.cominfoEntity.description;
     document.getElementById("comAddress").value = comData.cominfoEntity.address;
     document.getElementById("comWeb").value = comData.cominfoEntity.web;
     document.getElementById("resumeEmail").value = comData.cominfoEntity.mailbox;
@@ -147,6 +147,7 @@ function getApplicationList(){
 
             }
         })
+
 }
 
 function putApplicationInfo(ca){

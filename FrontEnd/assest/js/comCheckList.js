@@ -104,3 +104,21 @@ function toComments(){
     let appId = getQueryVariable("appId");
     window.location.href = "comMessageList.html?id="+id+"&appId="+appId;
 }
+function deleteWanted(i){
+    let applicationId = getQueryVariable("appId");
+    let aim_url = 'http://60.205.224.10:8000/delete/' + applicationId;
+    $.ajax({
+        type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
+
+            success: function (data) {
+                    console.log(data);
+                    window.location.href = "comPersonalCenter.html?id="+ companyId;
+                    //window.location.href = downloadUrl;
+
+            }
+    })
+
+}
