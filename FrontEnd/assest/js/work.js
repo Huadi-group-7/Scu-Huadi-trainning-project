@@ -1,6 +1,7 @@
 let app_info = {};
 let appID = '';
 let USER = '';
+let COMP = '';
 
 window.onload = function () {
 
@@ -174,7 +175,8 @@ function sendMessage() {
                 window.location.href = "index-2.html"
             }
             else{
-                let aim_url = "http://60.205.224.10:8000/comment/" + userID + "/" + data.data[0].companyId + "/" + appID + "/" + message;
+                COMP = data.data[0].companyId;
+                let aim_url = "http://60.205.224.10:8000/comment/" + USER + "/" + COMP + "/" + appID + "/" + message;
 
                 $.ajax({
                     type:'get',
@@ -202,6 +204,29 @@ function getQueryVariable(variable)
         if(pair[0] == variable){return pair[1];}
     }
     return(false);
+}
+
+function wantJob() {
+    document.getElementById("subJob").style.display = "initial";
+}
+
+function subJob() {
+    var file = document.getElementById('JobResume').files[0];
+    let data = new FormData();
+    data.append("file", file);
+    let aim_url = "http://60.205.224.10:8000/comment/" + USER + "/" + COMP + "/" + appID;
+
+    $.ajax({
+        type:'get',
+        async:'false',
+        url: aim_url,
+        data: data,
+        crossDomain:'true',
+        success: function (data) {
+            alert("发送成功");
+            window.location.reload();
+        }
+    });
 }
 
 function ChangePage(e) {

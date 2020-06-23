@@ -84,7 +84,7 @@ function getMessage() {
                 let i=0;
                 for(i;i<data.data.length;i++){
                     let cmsg = data.data[i];
-                    let html = "<blockquote><a href='work.html?appid="+ cmsg.applicationId + "&id="+ USER + "' >"+ cmsg.content + "</a></blockquote>";
+                    let html = "<blockquote><a href='work.html?appid="+ cmsg.applicationId + "&id="+ USER + "' >"+ cmsg.content + "</a><button onclick=deleteCom(" + cmsg.commentId +")>删除</button></blockquote>";
                     console.log(html)
                     document.getElementById("myComment").innerHTML += html;
 
@@ -155,3 +155,21 @@ function putInfo(userdata) {
     document.getElementById("workplace").value = userdata.entity.workaddress;
     document.getElementById("experience").innerText = userdata.entity.experience;
 }
+
+function deleteCom(commentId) {
+
+    $.ajax({
+        type:'get',
+        async:'false',
+        url: "http://60.205.224.10:8000/deleteComment/" + commentId,
+        crossDomain:'true',
+        success: function (data) {
+
+            alert("删除成功");
+            window.location.href = "person-page.html?pc=3&id=" + USER;
+
+        }
+    })
+
+}
+
