@@ -102,93 +102,22 @@
                                 学生简历
                             </h3>
                         </header>
-                        <hr>
-                            <div>
-                                <label><strong>证件照：</strong></label>
-                                <div id="photo">
-                                    <img src=""/>
-                                </div>
 
-                            </div>
-                        <hr>
-                            <div>
-                                <label><strong>性别：</strong></label>
-                                <text id="sex" name="sex"></text>
-                            </div>
-                        <hr>
-                        <div>
-                                <label><strong>真实姓名：</strong></label>
-                                <text name="realName" id="realName"></text>
-                            </div>
-                        <hr>
-                            <div>
-                                <label><strong>年龄：</strong></label>
-                                <text name="age" id="age"></text>
-                            </div>
-                        <hr>
-                            <div>
-                                <label><strong>毕业院校：</strong></label>
-                                <text name="school" id="school"></text>
-                            </div>
-                        <hr>
-                        <div>
-                                <label><strong>学历:</strong></label>
-                                <text name="educationExperience" id="educationExperience"></text>
-                        </div>
-                        <hr>
-                        <div>
-                                <label><strong>专业：</strong></label>
-                                <text name="major" id="major"></text>
-                        </div>
-                        <hr>
-                        <div>
-                                <label><strong>毕业日期：</strong></label>
-                                <text name="graduateDate" id="graduateDate"></text>
-                        </div>
-                        <hr>
-                        <div>
-                                <label><strong>手机号码：</strong></label>
-                                <text name="phoneNum" id="phoneNum"></text>
-                        </div>
-                        <hr>
-                        <div>
-
-                                <label><strong>邮箱：</strong></label>
-                                <text name="email" id="email"></text>
-
-                        </div>
-                        <hr>
-                        <div>
-                                <label><strong>自我介绍：</strong></label>
-                            <text name="selfIntroduce" id="selfIntroduce"></text>
-                        </div>
-                        <hr>
-                        <div>
-                                <label><strong>在校/工作经历：</strong></label>
-                            <text name="experience" id="experience"></text>
-                        </div>
                         <hr>
                         <div>
                                 <label><strong>简历：</strong></label>
                                <div id="downLoad" name="downLoad">
-                                   <a href=" ">下载简历</a>
+                                   <span id="downloadResume" onclick="downloadResume()">下载简历</span>
                                </div>
                         </div>
                         <hr>
-                        <div>
-                            <span>
-                            <button  name="checkPass" id="checkPass" class="sign__btn" style="width:30%;" onclick="" >
+
+                            <button  name="back" id="back" class="sign__btn" style="width:30%;" onclick="back()" >
                                 <span>
-                                    <font style="vertical-align: inherit;">审核通过</font>
+                                    <font style="vertical-align: inherit;">返回列表</font>
                                 </span>
                             </button>
-                            <button  name="checkNotPass" id="checkNotPass" class="sign__btn" style="width:30%;" onclick="" >
-                                <span>
-                                    <font style="vertical-align: inherit;">审核不通过</font>
-                                </span>
-                            </button>
-                            </span>
-                        </div>
+
 
                     </article>
 
@@ -317,6 +246,6 @@
     <script type='text/javascript' src='js/jquery.formd471.js?ver=3.18'></script>
     <script type='text/javascript' src='js/jquery.validate.minfc6b.js?ver=1.10.0'></script>
     <script type='text/javascript' src='js/custom5152.js?ver=1.0'></script>
-
+     <script type='text/javascript' src='assest/js/comCheckApplication.js'></script>
 </body>
 </html>

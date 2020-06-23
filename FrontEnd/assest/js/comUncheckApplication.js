@@ -35,6 +35,7 @@ function downloadResume(){
 function passCheck(){
     let comId = getQueryVariable("id");
     let rid = getQueryVariable("resumeId");
+    let appId = getQueryVariable("appId");
     let aim_url = 'http://60.205.224.10:8000/company/resumeYes/' + comId + "/" + rid;
     $.ajax({
             type:'get',
@@ -43,7 +44,8 @@ function passCheck(){
             crossDomain:'true',
 
             success: function (data) {
-                console.log
+                console.log(data);
+                window.location.href = "comCheckList.html?id=" + comId + "&appId=" + appId;
             }
     })
 }
