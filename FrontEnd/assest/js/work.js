@@ -46,6 +46,40 @@ window.onload = function () {
 
     });
 
+    $.ajax({
+        type:'get',
+        async:'false',
+        url: "http://60.205.224.10:8000/find/companyId/" + appID,
+        crossDomain:'true',
+        success: function (data) {
+            console.log(data);
+
+            if (data.data.length<=0){
+                alert("error");
+                window.location.href = "index-2.html"
+            }
+            else{
+                COMP = data.data[0].companyId;
+            }
+
+        }
+
+    });
+
+    if (USER !== COMP) {
+        $.ajax({
+            type: 'get',
+            async: 'true',
+            url: "http://60.205.224.10:8000/recom/writehis/" + USER + "/" + COMP + "/C2S",
+            crossDomain: 'true',
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    }
+
+
+
     var chart_1 = Highcharts.chart('line-chart', {
         chart: {
             type: 'line'
@@ -162,36 +196,16 @@ function sendMessage() {
     email = n_e[1].value;
     let message = document.getElementById("comment").value;
 
+    let aim_url = "http://60.205.224.10:8000/comment/" + USER + "/" + COMP + "/" + appID + "/" + message;
+
     $.ajax({
         type:'get',
         async:'false',
-        url: "http://60.205.224.10:8000/find/companyId/" + appID,
+        url: aim_url,
         crossDomain:'true',
         success: function (data) {
-            console.log(data);
-
-            if (data.data.length<=0){
-                alert("error");
-                window.location.href = "index-2.html"
-            }
-            else{
-                COMP = data.data[0].companyId;
-                let aim_url = "http://60.205.224.10:8000/comment/" + USER + "/" + COMP + "/" + appID + "/" + message;
-
-                $.ajax({
-                    type:'get',
-                    async:'false',
-                    url: aim_url,
-                    crossDomain:'true',
-                    success: function (data) {
-                        alert("发送成功");
-                    }
-                });
-
-            }
-
+            alert("发送成功");
         }
-
     });
 }
 
