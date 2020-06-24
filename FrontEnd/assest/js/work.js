@@ -239,7 +239,6 @@ function subJob() {
     $.ajax({
         type:'post',
         async:'false',
-        // headers: { "Origin": "127.0.0.1"},
         url: aim_url,
         data: data,
         processData: false,
