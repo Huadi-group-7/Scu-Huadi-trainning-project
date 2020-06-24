@@ -2,6 +2,7 @@ let comInfo = {};
 //let id = "gfhjrtyu56i";
 window.onload = function () {
 
+
 }
 
 function getQueryVariable(variable)

@@ -77,6 +77,7 @@ function getComInfo(){
             }
     })
 }
+
 function modifyInfo(){
     //alert(comId);
     let aim_url = 'http://60.205.224.10:8000/cpmpany/cominformation/' + comId;

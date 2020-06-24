@@ -1,4 +1,15 @@
 window.onload = function () {
+    let id = getQueryVariable("id");
+    comId = id;
+
+    if (id=="false" || id==false){
+        document.getElementById("title-signin").style.display = "initial";
+        document.getElementById("title-signon").style.display = "initial";
+    }
+    else{
+        document.getElementById("title-mine").style.display = "initial";
+    }
+
     getComment();
 }
 function getQueryVariable(variable)

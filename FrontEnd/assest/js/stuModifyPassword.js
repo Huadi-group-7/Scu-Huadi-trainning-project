@@ -1,6 +1,8 @@
 let USER='';
 
 window.onload = function () {
+
+
     let userId = getQueryVariable('id');
 
     USER = userId;

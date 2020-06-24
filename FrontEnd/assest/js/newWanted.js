@@ -1,6 +1,17 @@
 let comName = "";
 let comDes = "";
 window.onload = function () {
+    let id = getQueryVariable("id");
+    comId = id;
+
+    if (id=="false" || id==false){
+        document.getElementById("title-signin").style.display = "initial";
+        document.getElementById("title-signon").style.display = "initial";
+    }
+    else{
+        document.getElementById("title-mine").style.display = "initial";
+    }
+
     fullInfoOrNot();
 }
 function getQueryVariable(variable)
@@ -47,8 +58,8 @@ function release(){
     let comId = getQueryVariable("id");
     let position = document.getElementById("wantedName").value;
     let positionNum = document.getElementById("wantedNum").value;
-    let requirement = document.getElementById("posRe").val();
-    let posDes= document.getElementById("posDes").val();
+    let requirement = document.getElementById("posRe").value;
+    let posDes= document.getElementById("posDes").value;
     let money= document.getElementById("posSalary").value;
     let address =document.getElementById("address").value;
     let tag =document.getElementById("tag").value;
