@@ -62,7 +62,7 @@
                                                         <li><a href="person-page.html?pc=1" onclick=ChangePage(this)>我的首页</a></li>
                                                         <li><a href="person-page.html?pc=2" onclick=ChangePage(this)>我的简历</a></li>
                                                         <li><a href="person-page.html?pc=3" onclick=ChangePage(this)>我的消息</a></li>
-                                                        <li><a href="comModifyPassword.html?" onclick=ChangePage(this)>修改密码</a></li>
+                                                        <li><a href="" onclick=ChangePage(this)>修改密码</a></li>
                                                         <li><a href="index-2.html?" onclick="">注销登录</a></li>
                                                     </ul>
                                                 </li>
@@ -85,113 +85,29 @@
                                         <!-- start of page content -->
                                         <div class="span8 page-content">
                                                 <dl class="accordion clearfix">
-                                                        <dt id="1"><span></span>公司基本信息</dt>
+                                                        <dt id="1"><span></span>所有学生</dt>
                                                         <dd>
-                                                                <article class=" type-page  hentry clearfix">
-                                                                        <h1 class="post-title">公司基本信息</h1>
-                                                                        <p>您可以在此查看或修改公司信息，修改信息请及时保存</p>
-
-                                                                        <hr>
-                                                                            <div>
-                                                                                <label>公司名称*</label>
-                                                                                    <input name="comName" id="comName" class="span4" type="text" size="22"/>
-                                                                            </div>
-                                                                        <hr>
-                                                                                <div>
-                                                                                <label>公司邮箱*</label>
-                                                                                    <span name="comEmail" id="comEmail"></span>
-                                                                            </div>
-                                                                        <hr>
-                                                                            <div>
-                                                                                <label for="comNature">公司性质*</label>
-                                                                                <input name="comNature" id="comNature" class="span4" type="text" size="22"/>
-                                                                            </div>
-                                                                        <hr>
-                                                                            <div>
-                                                                                <label for="comSetupDate">公司成立日期*</label>
-                                                                                <input name="comSetupDate" id="comSetupDate" class="span4" type="text" size="22"/>
-                                                                            </div>
-                                                                        <hr>
-                                                                            <div class="costs-uploadfile-div">
-                                                                                <label for="logo">公司商标*</label>
-                                                                                <input type="file" name="logo" id="logo" accept="image/jpg,image/png,image/jpeg,image/svg,image/bmp" onchange="PreviewImage(this)"/>
-                                                                                <input type='text' id="textfield" />
-                                                                                <button class="allBtn costs-marl15">浏览</button>
-                                                                                <button class="allBtn costs-marl15">上传</button>
-                                                                                    <div id="imgPreview" style='width:100px; height: 100px;'>
-                                                                                        <img src=""/>
-                                                                                    </div>
-                                                                            </div>
-                                                                        <hr>
-                                                                            <div>
-                                                                                <label for="comIntroduction">公司简介</label>
-                                                                                <textarea name="comIntroduction" id="comIntroduction" class="span4" rows="6" type="text" size="22"></textarea>
-                                                                            </div>
-                                                                        <hr>
-                                                                            <div>
-                                                                                <label for="comSetupDate">公司地址</label>
-                                                                                <input name="comAddress" id="comAddress" class="span4" type="text" size="22"/>
-                                                                            </div>
-                                                                        <hr>
-                                                                            <div>
-                                                                                <label for="comWeb">公司官网</label>
-                                                                                <input name="comWeb" id="comWeb" class="span4" type="text" size="22"/>
-                                                                            </div>
-                                                                        <hr>
-                                                                          <div>
-                                                                                <label for="comEmail">接收简历的邮箱</label>
-                                                                                <input name="resumeEmail" id="resumeEmail" class="span4" type="text" size="22"/>
-                                                                            </div>
-                                                                        <hr>
-                                                                           <div>
-                                                                                   <button  name="comSaveInfo" id="comSaveInfo" class="button-save" onclick=modifyInfo()>
-                                                                                       保存
-                                                                                   </button>
-                                                                           </div>
-                                                                        <hr>
+                                                                <article id="allstu" class=" type-page  hentry clearfix">
 
 
                                                                 </article>
                                                         </dd>
 
-                                                        <dt id="2"><span></span>公司招聘</dt>
+                                                        <dt id="2"><span></span>所有公司</dt>
                                                         <dd>
-                                                                <article class=" type-page  hentry clearfix">
-                                                                        <h1 class="post-title">已发布招聘</h1>
-                                                                        <div class="post-meta clearfix">
-                                                                                 <span>已发布招聘数量：<span id="Released"></span></span>
-                                                                        </div>
-                                                                        <hr>
-
-                                                                        <p>您可以查看公司已经发布的招聘信息，也可以点击新建发布新的招聘</p>
-                                                                                <a><button  name="comNewWanted" id="comNewWanted" class="sign__btn"
-                                                                                           style="width:50%" onclick=toNewWanted() ><span><font style="vertical-align: inherit;">+新建招聘</font></span>
-                                                                                   </button>
-                                                                                </a>
-                                                                        <hr>
-
-                                                                        <!--已发布的招聘的卡片-->
-                                                                        <div id="applicationList">
-
-                                                                        </div>
-
+                                                                <article id="allcom" class=" type-page  hentry clearfix">
 
 
                                                                 </article>
                                                         </dd>
 
-                                                        <span>
-                                                                <button name="checkPass" id="toModify" class="sign__btn" style="width:30%;" onclick="toModifyPassword()">
-                                                                        <span>
-                                                                                <font style="vertical-align: inherit;">修改密码</font>
-                                                                        </span>
-                                                                </button>
-                                                                <button name="checkNotPass" id="logout" class="sign__btn" style="width:30%;" onclick="logout()" >
-                                                                        <span>
-                                                                                <font style="vertical-align: inherit;">注销账户</font>
-                                                                        </span>
-                                                                </button>
-                            </span>
+                                                        <dt id="3"><span></span>所有招聘</dt>
+                                                        <dd>
+                                                                <article id="allres" class=" type-page  hentry clearfix">
+
+
+                                                                </article>
+                                                        </dd>
                                                 </dl>
 
                                         </div>
@@ -320,7 +236,7 @@
                 <script type='text/javascript' src='js/custom.js'></script>
 
 
-                <script type='text/javascript' src='assest/js/comPersonalCenter.js'></script>
+                <script type='text/javascript' src='assest/js/manPersonalCenter.js'></script>
 
 
         </body>
