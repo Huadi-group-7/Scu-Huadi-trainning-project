@@ -81,7 +81,7 @@ function getCheckedResume(){
 function putCheckInfo(ca){
     if(ca.length > 0){
         for(let i = 0; i < ca.length; i++){
-            checkResumeIds[i] = ca[i].entity.resumeId;
+            checkResumeIds[i] = ca[i].resumeId;
             document.getElementById("checkedResume").innerHTML += "<hr><span id=\"check" + i + "\"  onclick=\"toView("+ i + ")\">"+(i+1)+".点击进入审核页面可下载简历</span>";
         }
     }
