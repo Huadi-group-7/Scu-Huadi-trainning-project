@@ -107,19 +107,17 @@ function modifyInfo(){
         data: JSON.stringify(data),
         contentType: 'application/json',
         success: function (data) {
-            alert(comId);
             console.log(data);
-
-           // window.location.href = "person-page.html?id=" + comId;
+            window.location.href = "comPersonalCenter.html?pc=1&id=" + comId;
         }
 
     });
 
 }
 function putInfo(comData) {
-    document.getElementById("comName").innerText = comData.cominfoEntity.companyName;
-    document.getElementById("comNature").value = comData.cominfoEntity.companyName;
-    document.getElementById("comSetUpDate").value = comData.cominfoEntity.comTime;
+    document.getElementById("comName").value = comData.cominfoEntity.companyName;
+    document.getElementById("comNature").value = comData.cominfoEntity.nature;
+    document.getElementById("comSetupDate").value = comData.cominfoEntity.comTime;
     document.getElementById("comIntroduction").value = comData.cominfoEntity.description;
     document.getElementById("comAddress").value = comData.cominfoEntity.address;
     document.getElementById("comWeb").value = comData.cominfoEntity.web;
