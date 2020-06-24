@@ -58,7 +58,21 @@ function toUnCheck(i){
     let rid = uncheckResumeIds[i];
     let id = getQueryVariable("id");
     let appId = getQueryVariable("appId");
-    window.location.href = "comUncheckApplication.html?id="+ id +"&resumeId=" + rid+"&appId="+appId;
+    let aim_url = "http://60.205.224.10:8000/company/resumeAcees/" + comId + "/" + appId+"/"+rid;
+     $.ajax({
+        type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
+
+            success: function (data) {
+                //console.log();
+                window.location.href = "comUncheckApplication.html?id="+ id +"&resumeId=" + rid+"&appId="+appId;
+
+
+            }
+    })
+
 }
 function getCheckedResume(){
     let comId = getQueryVariable("id");
