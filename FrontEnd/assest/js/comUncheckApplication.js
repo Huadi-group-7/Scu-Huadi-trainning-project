@@ -17,19 +17,24 @@ function downloadResume(){
     let aim_url = 'http://60.205.224.10:8000/look/sendresume/' + rid;
     $.ajax({
         type:'get',
-            async:'false',
-            url: aim_url,
-            crossDomain:'true',
+        async:'false',
+        url: aim_url,
+        crossDomain:'true',
 
-            success: function (data) {
-                if(data.data != undefined){
-                    let downloadUrl = data.data.url;
-                    //window.location.href = downloadUrl;
-                }
-                else{
-                    alert("data is undefined.");
-                }
+        success: function (data) {
+            console.log(data)
+            if(data.data != undefined){
+                let downloadUrl = data.data[0].url;
+                console.log(downloadUrl)
+                $.ajax({
+                    crossDomain: true,
+                    url: downloadUrl
+                });
             }
+            else{
+                alert("data is undefined.");
+            }
+        }
     })
 }
 function passCheck(){

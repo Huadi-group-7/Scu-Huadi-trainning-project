@@ -3,6 +3,15 @@ let comId = "";
 window.onload = function(){
     let id = getQueryVariable("id");
     comId = id;
+
+    if (id=="false" || id==false){
+        document.getElementById("title-signin").style.display = "initial";
+        document.getElementById("title-signon").style.display = "initial";
+    }
+    else{
+        document.getElementById("title-mine").style.display = "initial";
+    }
+
     getComInfo();
     getApplicationList();
 }
@@ -73,14 +82,14 @@ function modifyInfo(){
     let aim_url = 'http://60.205.224.10:8000/cpmpany/cominformation/' + comId;
     let new_comName = document.getElementById("comName").value;
     let new_nature = document.getElementById("comNature").value;
-    let new_setUpDate = document.getElementById("comSetUpDate").value;
-    let new_introduction = document.getElementById("comIntroduction").val();
+    let new_setUpDate = document.getElementById("comSetupDate").value;
+    let new_introduction = document.getElementById("comIntroduction").value;
     let new_address = document.getElementById("comAddress").value;
     let new_web = document.getElementById("comWeb").value;
     let new_email = document.getElementById("resumeEmail").value;
     let data = {
             cominformation: [{
-                    "companyName":new_comName,
+                     "companyName":new_comName,
                      "nature":new_nature,
                      "comTime":new_setUpDate,
                      "description":new_introduction,
@@ -89,13 +98,13 @@ function modifyInfo(){
                      "mailbox":new_email
                     }]
 
-        }
+        };
         $.ajax({
         type:'post',
         async:'false',
         url: aim_url,
         crossDomain:'true',
-        data: data,
+        data: JSON.stringify(data),
         contentType: 'application/json',
         success: function (data) {
             alert(comId);
@@ -111,7 +120,7 @@ function putInfo(comData) {
     document.getElementById("comName").innerText = comData.cominfoEntity.companyName;
     document.getElementById("comNature").value = comData.cominfoEntity.companyName;
     document.getElementById("comSetUpDate").value = comData.cominfoEntity.comTime;
-    document.getElementById("comIntroduction").val() = comData.cominfoEntity.description;
+    document.getElementById("comIntroduction").value = comData.cominfoEntity.description;
     document.getElementById("comAddress").value = comData.cominfoEntity.address;
     document.getElementById("comWeb").value = comData.cominfoEntity.web;
     document.getElementById("resumeEmail").value = comData.cominfoEntity.mailbox;
