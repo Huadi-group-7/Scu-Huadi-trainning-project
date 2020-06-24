@@ -56,7 +56,9 @@ function putUncheckInfo(ca){
 }
 function toUnCheck(i){
     let rid = uncheckResumeIds[i];
-    window.location.href = "comUncheckApplication.html?resumeId=" + rid;
+    let id = getQueryVariable("id");
+    let appId = getQueryVariable("appId");
+    window.location.href = "comUncheckApplication.html?id="+ id +"&resumeId=" + rid+"&appId="+appId;
 }
 function getCheckedResume(){
     let comId = getQueryVariable("id");
