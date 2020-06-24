@@ -91,6 +91,10 @@ function search(ques) {
     }
 }
 
+function gosearch() {
+    search(document.getElementById("s").value);
+}
+
 function putAns(list) {
     let i=0;
     for (i;i<list.length;i++){

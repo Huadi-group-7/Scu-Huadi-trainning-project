@@ -234,16 +234,16 @@ function subJob() {
     var file = document.getElementById('JobResume').files[0];
     let data = new FormData();
     data.append("file", file);
-    let aim_url = "http://60.205.224.10/lw-api/user/sendresume/" + USER + "/" + COMP + "/" + appID;
+    let aim_url = "http://60.205.224.10:8000/user/sendresume/" + USER + "/" + COMP + "/" + appID;
 
     $.ajax({
-        type:'get',
+        type:'post',
         async:'false',
         // headers: { "Origin": "127.0.0.1"},
         url: aim_url,
         data: data,
-        contentType: "jsonp",
         processData: false,
+        contentType: false,
         crossDomain: true,
         success: function (data) {
             alert("发送成功");
