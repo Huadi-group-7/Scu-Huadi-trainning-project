@@ -68,7 +68,7 @@ window.onload = function () {
 
     var timeoutId;
     timeoutId = setTimeout(function () {
-        if (USER !== COMP || COMP !== '') {
+        if (USER != COMP || COMP != '') {
             $.ajax({
                 type: 'get',
                 async: 'true',
@@ -246,8 +246,14 @@ function subJob() {
         contentType: false,
         crossDomain: true,
         success: function (data) {
-            alert("发送成功");
-            window.location.reload();
+            if(data.code=="1"){
+                alert(data.msg);
+            }
+            else{
+                alert("发送成功");
+                window.location.reload();
+            }
+
         }
     });
 }
