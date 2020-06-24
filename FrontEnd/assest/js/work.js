@@ -68,7 +68,7 @@ window.onload = function () {
 
     var timeoutId;
     timeoutId = setTimeout(function () {
-        if (USER !== COMP || COMP !== '') {
+        if (USER != COMP || COMP != '') {
             $.ajax({
                 type: 'get',
                 async: 'true',
@@ -237,7 +237,7 @@ function subJob() {
     let aim_url = "http://60.205.224.10:8000/user/sendresume/" + USER + "/" + COMP + "/" + appID;
 
     $.ajax({
-        type:'get',
+        type:'post',
         async:'false',
         // headers: { "Origin": "127.0.0.1"},
         url: aim_url,
@@ -245,8 +245,14 @@ function subJob() {
         processData: false,
         crossDomain: true,
         success: function (data) {
-            alert("发送成功");
-            window.location.reload();
+            if(data.code=="1"){
+                alert(data.msg);
+            }
+            else{
+                alert("发送成功");
+                window.location.reload();
+            }
+
         }
     });
 }
