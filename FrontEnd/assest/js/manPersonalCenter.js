@@ -80,7 +80,7 @@ function getInfo(){
         success: function (data) {
             console.log(data);
             comInfo = data.data;
-            putInfo(comInfo,allres);
+            putInfo(comInfo, "allres");
 
         }
     })
@@ -108,13 +108,13 @@ function putInfo(data, id) {
         let html = "";
         switch (id) {
             case "allstu":
-                html = "<p class='success'><a href='persona-page.html?id=" + data[i].entity.userId + "'>"+data[i].entity.realname+"</a><button >删除<button></p>";
+                html = "<p class='success'><a href='person-page.html?id=" + data[i].entity.userId + "'>"+data[i].entity.realname+"</a><button style='float: right'>删除<button></p>";
                 break;
             case "allcom":
-                html = "<p class='success'><a href='comPersonalCenter.html?id=" + data[i].cominfoEntity.companyId + "'>"+data[i].cominfoEntity.companyName+"</a><button >删除<button></p>";
+                html = "<p class='success'><a href='comPersonalCenter.html?id=" + data[i].cominfoEntity.companyId + "'>"+data[i].cominfoEntity.companyName+"</a><button style='float: right'>删除<button></p>";
                 break;
             case "allres":
-            html = "<p class='success'><a href='work.html?id=" + data[i].entity.applicationId + "'>"+data[i].entity.comName+ data[i].entity.position +"</a><button >删除<button></p>";
+            html = "<p class='success'><a href='work.html?appid=" + data[i].entity.applicationId + "'>"+data[i].entity.comName+ data[i].entity.position +"</a><button style='float: right'>删除<button></p>";
             break;
         }
 
