@@ -56,7 +56,23 @@ function putUncheckInfo(ca){
 }
 function toUnCheck(i){
     let rid = uncheckResumeIds[i];
-    window.location.href = "comUncheckApplication.html?resumeId=" + rid;
+    let id = getQueryVariable("id");
+    let appId = getQueryVariable("appId");
+    let aim_url = "http://60.205.224.10:8000/company/resumeAcees/" + comId + "/" + appId+"/"+rid;
+     $.ajax({
+        type:'get',
+            async:'false',
+            url: aim_url,
+            crossDomain:'true',
+
+            success: function (data) {
+                //console.log();
+                window.location.href = "comUncheckApplication.html?id="+ id +"&resumeId=" + rid+"&appId="+appId;
+
+
+            }
+    })
+
 }
 function getCheckedResume(){
     let comId = getQueryVariable("id");
@@ -79,7 +95,7 @@ function getCheckedResume(){
 function putCheckInfo(ca){
     if(ca.length > 0){
         for(let i = 0; i < ca.length; i++){
-            checkResumeIds[i] = ca[i].entity.resumeId;
+            checkResumeIds[i] = ca[i].resumeId;
             document.getElementById("checkedResume").innerHTML += "<hr><span id=\"check" + i + "\"  onclick=\"toView("+ i + ")\">"+(i+1)+".点击进入审核页面可下载简历</span>";
         }
     }
